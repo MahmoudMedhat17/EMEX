@@ -1,36 +1,62 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import { useTranslation } from 'react-i18next';
+
 
 const Navbar = () => {
-  const [isRTL, setIsRTL] = useState(true);
+
+  const { t, i18n } = useTranslation();
   const [openMenu, setOpenMenu] = useState(false);
 
+  const handleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar");
+  };
+
+  const isArabic = i18n.language === "ar";
+
+
   return (
-    <header className="bg-white shadow" dir={isRTL ? "rtl" : "ltr"}>
+    <header className="bg-white shadow" dir={`${isArabic ? "ltr" : "rtl"}`}>
       <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-16">
 
-        <Link to="/">
-          <img src="/assets/logo.png" alt="logo" className="w-24" />
-        </Link>
+        <div className="flex items-center lg:gap-[50px] xl:gap-[88px]">
+          <Link to="/">
+            <img src="/assets/logo.png" alt="logo" className="w-24" />
+          </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
-          <span className="cursor-pointer">الصفحة الرئيسية</span>
-          <span className="cursor-pointer">من نحن</span>
-          <span className="cursor-pointer">خدماتنا</span>
-          <span className="cursor-pointer">تواصل معنا</span>
-        </nav>
+          <nav className="hidden md:flex items-center gap-10">
+            <span className="cursor-pointer text-neutralLightGray">{t("home")}</span>
+            <span className="cursor-pointer text-neutralLightGray">{t("about")}</span>
+            <div className="flex items-center gap-1.5">
+              {
+                !isArabic ?
+                  (
+                    <>
+                      <img src="/assets/arrowDown.png" />
+                      <span className="cursor-pointer text-neutralLightGray">{t("services")}</span>
+                    </>
+                  )
+                  :
+                  (
+                    <>
+                      <span className="cursor-pointer text-neutralLightGray">{t("services")}</span>
+                      <img src="/assets/arrowDown.png" />
+                    </>
+                  )
+              }
+            </div>
+            <span className="cursor-pointer text-neutralLightGray">{t("contact")}</span>
+          </nav>
+        </div>
 
         <div className="hidden md:flex items-center gap-6">
           <button className="cursor-pointer bg-primaryMain text-white px-4 py-1.5 rounded-lg">
-            اطلب خدمتك
+            {t("order")}
           </button>
 
-          <div
-            className="flex items-center gap-1 cursor-pointer"
-            onClick={() => setIsRTL(!isRTL)}
-          >
+          <div onClick={handleLanguage} className="flex items-center gap-1 cursor-pointer">
             <img src="/assets/translateIcon.png" alt="translate" />
-            <span>{isRTL ? "English" : "العربية"}</span>
+            <span>{t("langSwitch")}</span>
           </div>
         </div>
 
@@ -55,22 +81,22 @@ const Navbar = () => {
       </div>
 
       {openMenu && (
-        <div className={`md:hidden px-6 py-4 space-y-4 ${isRTL ? "text-right" : "text-left"}`}>
-          <span className="block cursor-pointer">الصفحة الرئيسية</span>
-          <span className="block cursor-pointer">من نحن</span>
-          <span className="block cursor-pointer">خدماتنا</span>
-          <span className="block cursor-pointer">تواصل معنا</span>
+        <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-right" : "text-left"}`}>
+          <span className="block cursor-pointer">{t("home")}</span>
+          <span className="block cursor-pointer">{t("about")}</span>
+          <span className="block cursor-pointer">{t("services")}</span>
+          <span className="block cursor-pointer">{t("contact us")}</span>
 
           <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4">
-            اطلب خدمتك
+            {t("order")}
           </button>
 
           <div
             className="flex items-center gap-2 cursor-pointer mt-2"
-            onClick={() => setIsRTL(!isRTL)}
+            onClick={handleLanguage}
           >
             <img src="/assets/translateIcon.png" alt="translate" className="w-5" />
-            <span>{isRTL ? "English" : "Arabic"}</span>
+            <span>{isArabic ? "English" : "Arabic"}</span>
           </div>
         </div>
       )}
