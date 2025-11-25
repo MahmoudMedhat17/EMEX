@@ -17,30 +17,44 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow" dir={`${isArabic ? "ltr" : "rtl"}`}>
-      <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-16">
+      <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-[100px]">
 
         <div className="flex items-center lg:gap-[50px] xl:gap-[88px]">
           <Link to="/">
             <img src="/assets/logo.png" alt="logo" className="w-24" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-10 w-full relative">
             <span className="cursor-pointer text-neutralLightGray">{t("home")}</span>
             <span className="cursor-pointer text-neutralLightGray">{t("about")}</span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center justify-center gap-1.5 h-16 group">
+              <div className="absolute top-16 bg-neutralWhite w-fit space-y-4 py-4 px-2 hidden group-hover:block shadow-lg">
+                <p className="text-center cursor-pointer text-neutralLightGray">
+                  توصيل الطرود
+                </p>
+                <p className="text-center cursor-pointer text-neutralLightGray">
+                  النقل الجاف والمبرد
+                </p>
+                <p className="text-center cursor-pointer text-neutralLightGray">
+                  خدمه التحزين
+                </p>
+                <p className="text-center cursor-pointer text-neutralLightGray">
+                  تخليص جمركي
+                </p>
+              </div>
               {
                 !isArabic ?
                   (
                     <>
-                      <img src="/assets/arrowDown.png" />
                       <span className="cursor-pointer text-neutralLightGray">{t("services")}</span>
+                      <img src="/assets/arrowDown.png" className="cursor-pointer" />
                     </>
                   )
                   :
                   (
                     <>
                       <span className="cursor-pointer text-neutralLightGray">{t("services")}</span>
-                      <img src="/assets/arrowDown.png" />
+                      <img src="/assets/arrowDown.png" className="cursor-pointer" />
                     </>
                   )
               }
@@ -55,8 +69,8 @@ const Navbar = () => {
           </button>
 
           <div onClick={handleLanguage} className="flex items-center gap-1 cursor-pointer">
-            <img src="/assets/translateIcon.png" alt="translate" />
             <span>{t("langSwitch")}</span>
+            <img src="/assets/translateIcon.png" alt="translate" />
           </div>
         </div>
 
@@ -81,7 +95,7 @@ const Navbar = () => {
       </div>
 
       {openMenu && (
-        <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-right" : "text-left"}`}>
+        <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
           <span className="block cursor-pointer">{t("home")}</span>
           <span className="block cursor-pointer">{t("about")}</span>
           <span className="block cursor-pointer">{t("services")}</span>
@@ -96,7 +110,7 @@ const Navbar = () => {
             onClick={handleLanguage}
           >
             <img src="/assets/translateIcon.png" alt="translate" className="w-5" />
-            <span>{isArabic ? "English" : "Arabic"}</span>
+            <span>{t("langSwitch")}</span>
           </div>
         </div>
       )}
