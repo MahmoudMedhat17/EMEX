@@ -8,11 +8,13 @@ import Ready from "@/pages/Home/Ready";
 const Home = () => {
   return (
     <>
-        <Hero />
+      <Hero />
+      <div className="px-6 md:px-[50px] lg:px-[70px] xl:px-[100px]">
         <About />
         <Services />
         <Whyus />
-        <Ready/>  
+        <Ready />
+      </div>
     </>
   )
 }

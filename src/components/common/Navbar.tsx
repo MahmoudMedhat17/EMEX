@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow" dir={`${isArabic ? "ltr" : "rtl"}`}>
-      <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-[100px]">
+      <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px]">
 
         <div className="flex items-center lg:gap-[50px] xl:gap-[88px]">
           <Link to="/">

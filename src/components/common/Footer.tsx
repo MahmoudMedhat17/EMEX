@@ -1,8 +1,9 @@
+/* eslint-disable no-irregular-whitespace */
 
 const Footer = () => {
   return (
     <footer className="bg-footerColor">
-      <div className="mx-auto max-w-7xl space-y-8 px-[100px] py-16">
+      <div className="mx-auto max-w-7xl space-y-8 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px] py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div>
             <img src="/assets/footerLogo.png" alt="EMEX-logo" />
