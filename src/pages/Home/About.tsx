@@ -4,7 +4,7 @@
 const About = () => {
   return (
     <div className="py-[92px] flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]">
-      <img src="@/assets/aboutImage.png" className="lg:w-[50%]" />
+      <img src="assets/aboutImage.png" className="lg:w-[50%]" />
       <div className="flex flex-col items-end text-end space-y-4">
         <p className="text-primaryDark text-lg font-semibold">
           من نحن
