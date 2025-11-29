@@ -5,17 +5,14 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
 
-      {/* Background image */}
       <img
         src="/assets/heroImage.jpg"
         className="absolute inset-0 w-full h-full object-cover"
         alt=""
       />
 
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Content (positioned slightly upward) */}
       <div className="
         absolute inset-0 
         flex flex-col items-center 
