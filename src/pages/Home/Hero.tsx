@@ -28,15 +28,15 @@ const Hero = () => {
             حلول لوجستية موثوقة تدعم<br />نمو أعمالك
           </h1>
 
-          <p className="max-w-3xl mt-6 text-lg font-normal">
+          <p className="max-w-3xl mt-4 md:mt-6 text-lg font-normal">
             نحن نضمن لك توصيل سريع ودقيق، مع أمان كامل لشحناتك. نقدم لك تجربة شحن متكاملة تدعم نمو تجارتك محليًا ودوليًا، مما يتيح لك التركيز على تطوير أعمالك دون القلق بشأن الشحن
           </p>
 
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <button className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 py-3 px-8 rounded-lg font-semibold cursor-pointer">
+          <div className="mt-6 md:mt-8 flex items-center justify-center gap-4">
+            <button className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 p-4 rounded-lg font-semibold cursor-pointer">
               تعرف على خدماتنا
             </button>
-            <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 py-3 px-8 rounded-lg font-semibold cursor-pointer">
+            <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 p-4 rounded-lg font-semibold cursor-pointer">
               اطلب خدمتك
             </button>
           </div>

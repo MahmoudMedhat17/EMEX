@@ -14,9 +14,12 @@ const Navbar = () => {
 
   const isArabic = i18n.language === "ar";
 
+  const direction = isArabic ? "rtl" : "ltr";
+
+
 
   return (
-    <header className="bg-white shadow" dir={`${isArabic ? "ltr" : "rtl"}`}>
+    <header className="bg-white shadow" dir={direction}>
       <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px]">
 
         <div className="flex items-center lg:gap-[50px] xl:gap-[88px]">
@@ -25,8 +28,8 @@ const Navbar = () => {
           </Link>
 
           <nav className="hidden md:flex items-center gap-10 w-full relative">
-            <span className="cursor-pointer text-neutralLightGray">{t("home")}</span>
-            <span className="cursor-pointer text-neutralLightGray">{t("about")}</span>
+            <span className="cursor-pointer text-neutralLightGray">{t("navbar.home")}</span>
+            <span className="cursor-pointer text-neutralLightGray">{t("navbar.about")}</span>
             <div className="flex items-center justify-center gap-1.5 h-16 group">
               <div className="absolute top-16 bg-neutralWhite w-fit space-y-4 py-4 px-2 hidden group-hover:block shadow-lg">
                 <p className="text-center cursor-pointer text-neutralLightGray">
@@ -46,30 +49,30 @@ const Navbar = () => {
                 !isArabic ?
                   (
                     <>
-                      <span className="cursor-pointer text-neutralLightGray">{t("services")}</span>
+                      <span className="cursor-pointer text-neutralLightGray">{t("navbar.services")}</span>
                       <img src="/assets/arrowDown.png" className="cursor-pointer" />
                     </>
                   )
                   :
                   (
                     <>
-                      <span className="cursor-pointer text-neutralLightGray">{t("services")}</span>
+                      <span className="cursor-pointer text-neutralLightGray">{t("navbar.services")}</span>
                       <img src="/assets/arrowDown.png" className="cursor-pointer" />
                     </>
                   )
               }
             </div>
-            <span className="cursor-pointer text-neutralLightGray">{t("contact")}</span>
+            <span className="cursor-pointer text-neutralLightGray">{t("navbar.contact")}</span>
           </nav>
         </div>
 
         <div className="hidden md:flex items-center gap-6">
           <button className="cursor-pointer bg-primaryMain text-white px-4 py-1.5 rounded-lg">
-            {t("order")}
+            {t("navbar.order")}
           </button>
 
           <div onClick={handleLanguage} className="flex items-center gap-1 cursor-pointer">
-            <span>{t("langSwitch")}</span>
+            <span>{t("navbar.langSwitch")}</span>
             <img src="/assets/translateIcon.png" alt="translate" />
           </div>
         </div>
@@ -96,13 +99,13 @@ const Navbar = () => {
 
       {openMenu && (
         <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
-          <span className="block cursor-pointer">{t("home")}</span>
-          <span className="block cursor-pointer">{t("about")}</span>
-          <span className="block cursor-pointer">{t("services")}</span>
-          <span className="block cursor-pointer">{t("contact us")}</span>
+          <span className="block cursor-pointer">{t("navbar.home")}</span>
+          <span className="block cursor-pointer">{t("navbar.about")}</span>
+          <span className="block cursor-pointer">{t("navbar.services")}</span>
+          <span className="block cursor-pointer">{t("navbar.contact us")}</span>
 
           <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4">
-            {t("order")}
+            {t("navbar.order")}
           </button>
 
           <div
@@ -110,7 +113,7 @@ const Navbar = () => {
             onClick={handleLanguage}
           >
             <img src="/assets/translateIcon.png" alt="translate" className="w-5" />
-            <span>{t("langSwitch")}</span>
+            <span>{t("navbar.langSwitch")}</span>
           </div>
         </div>
       )}

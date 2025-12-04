@@ -1,8 +1,25 @@
 {
-  "home": "الصفحة الرئيسية",
-  "about": "من نحن",
-  "services": "خدماتنا",
-  "contact": "تواصل معنا",
-  "order": "اطلب خدمتك",
-  "langSwitch": "English"
+  "navbar":{
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact us",
+    "order": "Order",
+    "langSwitch": "العربية"
+  },
+  "footer":{
+    "desc":"A top logistics firm offering global shipping, storage, and supply chain services",
+    "linkOne":"Quick Links",
+    "linkTwo":"Services",
+    "linkThree":"Get in Touch",
+    "home":"Home Page",
+    "whoWeAre":"About Us",
+    "contact":"Contact Us",
+    "parcelDelivery":"Parcel Delivery",
+    "dryAndRefrigeratedTransport":"Dry and Refrigerated Transport",
+    "storageServices":"Storage Services",
+    "customsClearance":"Customs Clearance",
+    "email":"info@Femexs.com",
+    "location":"Saudi Arabia - Jeddah"
+  }
 }

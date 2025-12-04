@@ -1,8 +1,26 @@
 {
-  "home": "Home",
-  "about": "About",
-  "services": "Services",
-  "contact": "Contact us",
-  "order": "Order",
-  "langSwitch": "العربية"
+  "navbar":{
+    "home": "الصفحة الرئيسية",
+    "about": "من نحن",
+    "services": "خدماتنا",
+    "contact": "تواصل معنا",
+    "order": "اطلب خدمتك",
+    "langSwitch": "English"
+  },
+  "footer":{
+    "desc":"شركة لوجستية رائدة تقدم حلول شحن وتخزين وسلسلة توريد شاملة في جميع أنحاء العالم.",
+    "linkOne":"روابط سريعة",
+    "linkTwo":"الخدمات",
+    "linkThree":"تواصل معنا ",
+    "home":"الصفحة الرئيسية",
+    "whoWeAre":"من نحن",
+    "contact":"تواصل معنا",
+    "parcelDelivery":"توصيل الطرود",
+    "dryAndRefrigeratedTransport":"النقل الجاف والمبرد",
+    "storageServices":"خدمه التخزين",
+    "customsClearance":"تخليص جمركي",
+    "email":"info@Femexs.com",
+    "location":"المملكة العربية السعودية - جدة "
+  }
 }
+

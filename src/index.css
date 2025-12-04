@@ -18,3 +18,10 @@
     --color-neutralWhite: #FFFFFF;
     --color-footerColor:#111D35;
 }
+
+@utility bg-ready-section{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),  url("/assets/readyPic.png");
+    background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
