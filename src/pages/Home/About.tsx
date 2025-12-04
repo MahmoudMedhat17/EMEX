@@ -3,7 +3,7 @@
 
 const About = () => {
   return (
-    <div className="py-[92px] flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]">
+    <section className="py-[92px] flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]">
       <img src="assets/aboutImage.png" className="lg:w-[50%]" />
       <div className="flex flex-col items-end text-end space-y-4">
         <p className="text-primaryDark text-lg font-semibold">
@@ -15,11 +15,11 @@ const About = () => {
         <p className="lg:max-w-[400px] text-neutralDarkGray">
           نحن شركة لوجستية متخصصة في تقديم خدمات متكاملة للشحن والتوزيع وإدارة سلاسل الإمداد. نعمل بخبرة كبيرة في القطاع، ونسعى دائمًا لتوفير حلول عملية وفعّالة تلائم احتياجات عملائنا سواء كانوا أفرادًا أو شركات
         </p>
-        <button className="bg-primaryMain text-white cursor-pointer p-4 rounded-lg text-lg font-semibold">
+        <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 cursor-pointer p-4 rounded-lg text-lg font-semibold">
           اعرف المزيد
         </button>
       </div>
-    </div>
+    </section>
   )
 }
 

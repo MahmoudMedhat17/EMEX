@@ -33,10 +33,10 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            <button className="bg-white border-primaryMain text-primaryDark py-3 px-8 rounded-lg font-semibold cursor-pointer">
+            <button className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 py-3 px-8 rounded-lg font-semibold cursor-pointer">
               تعرف على خدماتنا
             </button>
-            <button className="bg-primaryMain text-white py-3 px-8 rounded-lg font-semibold cursor-pointer">
+            <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 py-3 px-8 rounded-lg font-semibold cursor-pointer">
               اطلب خدمتك
             </button>
           </div>
