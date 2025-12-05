@@ -1,6 +1,10 @@
 /* eslint-disable no-irregular-whitespace */
 import { Link } from "react-router";
 import { useTranslation } from 'react-i18next';
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { TbBrandLinkedinFilled } from "react-icons/tb";
+
 
 
 const Footer = () => {
@@ -15,94 +19,96 @@ const Footer = () => {
 
   return (
     <footer className="bg-footerColor" dir={direction}>
-      <div className="mx-auto max-w-7xl space-y-8 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px] py-16">
+      <div className="mx-auto  space-y-8 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px] py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div>
-            <img src="/assets/footerLogo.png" alt="EMEX-logo" />
+            <img src="/assets/footerLogo.png" alt="EMEX-logo" className="w-[126px] h-[100px]"/>
 
-            <p className="mt-4 max-w-xs text-neutralWhite">
+            <p className="mt-4 max-w-xs text-neutralWhite highLineHeight">
               {t("footer.desc")}
             </p>
 
             <ul className="mt-8 flex gap-6">
               <li>
-                <Link to={"/"}>
-                  <img src="/assets/facebook.png" />
+                <Link to={"/"} className="">
+                  <FaFacebook className="w-6 h-6 text-primarySoft hover:text-primaryMain duration-500" />
                 </Link>
               </li>
               <li>
                 <Link to={"/"}>
-                  <img src="/assets/instagram.png" />
+                  <FaInstagram className="w-6 h-6 text-primarySoft hover:text-primaryMain duration-500" />
                 </Link>
               </li>
               <li>
                 <Link to={"/"}>
-                  <img src="/assets/twitter.png" />
+                  <FaXTwitter className="w-6 h-6 text-primarySoft hover:text-primaryMain duration-500" />
                 </Link>
               </li>
               <li>
                 <Link to={"/"}>
-                  <img src="/assets/linkedin.png" />
+                  <TbBrandLinkedinFilled className="w-6 h-6 text-primarySoft hover:text-primaryMain duration-500" />
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <p className="text-neutralWhite mb-2">
+          <div className="w-fit">
+            <p className="text-neutralWhite mb-4 smallLineHeight">
               {t("footer.linkOne")}
             </p>
             <ul className="space-y-4">
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
                 {t("footer.home")}
               </li>
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
                 {t("footer.whoWeAre")}
               </li>
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
                 {t("footer.contact")}
               </li>
             </ul>
           </div>
-          <div>
-            <p className="text-neutralWhite mb-2">
+
+          <div className="w-fit">
+            <p className="text-neutralWhite mb-4 smallLineHeight">
               {t("footer.linkTwo")}
             </p>
             <ul className="space-y-4">
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
                 {t("footer.parcelDelivery")}
               </li>
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
                 {t("footer.dryAndRefrigeratedTransport")}
               </li>
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
                 {t("footer.storageServices")}
               </li>
-              <li className="text-neutralLightGray">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
                 {t("footer.customsClearance")}
               </li>
             </ul>
           </div>
-          <div>
-            <p className="text-neutralWhite mb-2">
+
+          <div className="w-fit">
+            <p className="text-neutralWhite mb-4 smallLineHeight">
               {t("footer.linkThree")}
             </p>
             <ul className="space-y-4">
               <li className="text-neutralLightGray flex items-center gap-2">
                 <img src="/assets/locationIcon.png" alt="locationIcon" />
-                <span>
+                <span className="hover:text-primaryMain duration-500 cursor-default">
                   {t("footer.location")}
                 </span>
               </li>
               <li className="text-neutralLightGray flex items-center gap-2">
                 <img src="/assets/emailIcon.png" alt="emailIcon" />
-                <span>
+                <span className="hover:text-primaryMain duration-500 cursor-default">
                   {t("footer.email")}
                 </span>
               </li>
               <li className="text-neutralLightGray flex items-center gap-2">
                 <img src="/assets/phoneIcon.png" alt="phoneIcon" />
-                <span>
+                <span className="hover:text-primaryMain duration-500 cursor-default">
                   (+966) 596003377
                 </span>
               </li>
@@ -111,7 +117,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t-2 border-primaryMain">
-          <p className="text-center text-neutralLightGray mt-9">© 2025 FEMEX Logistics Company. جميع الحقوق محفوظة.</p>
+          <p className="text-center text-neutralLightGray mt-9 highLineHeight">
+
+            جميع الحقوق محفوظة.
+            <span>FEMEX Logistics Company © 2025</span>
+
+          </p>
         </div>
       </div>
     </footer>

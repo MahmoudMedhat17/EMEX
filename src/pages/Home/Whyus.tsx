@@ -11,13 +11,13 @@ const Whyus = () => {
         <Benefits heading="التزام بالمواعيد" desc="نضمن تسليم الشحنات في الوقت المحدد مع متابعة مستمرة طوال الرحلة" />
       </div>
       <div className="order-1 lg:order-2 w-full lg:w-[25%] text-end space-y-2.5">
-        <p className="bg-primarySoft text-primaryDark text-lg font-semibold py-2 px-4 inline-block">
+        <p className="bg-primarySoft text-primaryDark text-lg font-semibold py-2 px-4 inline-block smallLineHeight">
           القيمة المضافة
         </p>
-        <h2 className="text-[40px] font-semibold">
+        <h2 className="text-[40px] font-semibold smallLineHeight">
           لماذا تختارنا ؟
         </h2>
-        <p className="text-lg text-neutralDarkGray">
+        <p className="text-lg text-neutralDarkGray highLineHeight">
           لأن نجاح شحنتك يبدأ من شريك لوجستي يفهم احتياجاتك
         </p>
       </div>

@@ -7,6 +7,21 @@
     "order": "Order",
     "langSwitch": "العربية"
   },
+  "hero":{
+    "title":"Reliable logistics solutions support your business growth",
+    "desc":"We deliver fast, precise, and fully secure shipping services giving you a seamless logistics experience locally and internationally. Focus on growing your business while we handle your shipments with confidence",
+    "buttons":{
+      "buttonLeft":"Book Your Service",
+      "buttonRight":"Explore Our Services"
+    }
+  },
+   "about":{
+    "subHeading":"About Us",
+    "desc":"We are a logistics company focused on shipping, distribution, and supply chain management. With our extensive experience, we aim to provide effective solutions tailored to the needs of both individuals and businesses",
+    "buttons":{
+      "button":"Learn more"
+    }
+  },
   "footer":{
     "desc":"A top logistics firm offering global shipping, storage, and supply chain services",
     "linkOne":"Quick Links",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { useTranslation } from 'react-i18next';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
 const Navbar = () => {
@@ -28,51 +29,51 @@ const Navbar = () => {
           </Link>
 
           <nav className="hidden md:flex items-center gap-10 w-full relative">
-            <span className="cursor-pointer text-neutralLightGray">{t("navbar.home")}</span>
-            <span className="cursor-pointer text-neutralLightGray">{t("navbar.about")}</span>
+            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">{t("navbar.home")}</span>
+            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">{t("navbar.about")}</span>
             <div className="flex items-center justify-center gap-1.5 h-16 group">
               <div className="absolute top-16 bg-neutralWhite w-fit space-y-4 py-4 px-2 hidden group-hover:block shadow-lg">
-                <p className="text-center cursor-pointer text-neutralLightGray">
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
                   توصيل الطرود
                 </p>
-                <p className="text-center cursor-pointer text-neutralLightGray">
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
                   النقل الجاف والمبرد
                 </p>
-                <p className="text-center cursor-pointer text-neutralLightGray">
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
                   خدمه التحزين
                 </p>
-                <p className="text-center cursor-pointer text-neutralLightGray">
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
                   تخليص جمركي
                 </p>
               </div>
               {
                 !isArabic ?
                   (
-                    <>
-                      <span className="cursor-pointer text-neutralLightGray">{t("navbar.services")}</span>
-                      <img src="/assets/arrowDown.png" className="cursor-pointer" />
-                    </>
+                    <div className="cursor-pointer flex items-center text-neutralLightGray hover:text-primaryMain duration-500">
+                      <span className="highLineHeight">{t("navbar.services")}</span>
+                      <MdOutlineKeyboardArrowDown />
+                    </div>
                   )
                   :
                   (
-                    <>
-                      <span className="cursor-pointer text-neutralLightGray">{t("navbar.services")}</span>
-                      <img src="/assets/arrowDown.png" className="cursor-pointer" />
-                    </>
+                    <div className="cursor-pointer flex items-center text-neutralLightGray hover:text-primaryMain duration-500">
+                      <span className="highLineHeight">{t("navbar.services")}</span>
+                      <MdOutlineKeyboardArrowDown />
+                    </div>
                   )
               }
             </div>
-            <span className="cursor-pointer text-neutralLightGray">{t("navbar.contact")}</span>
+            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain highLineHeight">{t("navbar.contact")}</span>
           </nav>
         </div>
 
         <div className="hidden md:flex items-center gap-6">
-          <button className="cursor-pointer bg-primaryMain text-white px-4 py-1.5 rounded-lg">
+          <button className="cursor-pointer bg-primaryMain text-white hover:bg-primaryDark duration-500 px-4 py-1.5 rounded-lg smallLineHeight">
             {t("navbar.order")}
           </button>
 
           <div onClick={handleLanguage} className="flex items-center gap-1 cursor-pointer">
-            <span>{t("navbar.langSwitch")}</span>
+            <span className="highLineHeight">{t("navbar.langSwitch")}</span>
             <img src="/assets/translateIcon.png" alt="translate" />
           </div>
         </div>
@@ -99,12 +100,12 @@ const Navbar = () => {
 
       {openMenu && (
         <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
-          <span className="block cursor-pointer">{t("navbar.home")}</span>
-          <span className="block cursor-pointer">{t("navbar.about")}</span>
-          <span className="block cursor-pointer">{t("navbar.services")}</span>
-          <span className="block cursor-pointer">{t("navbar.contact us")}</span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.home")}</span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.about")}</span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.services")}</span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.contact")}</span>
 
-          <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4">
+          <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4 smallLineHeight">
             {t("navbar.order")}
           </button>
 
@@ -113,7 +114,7 @@ const Navbar = () => {
             onClick={handleLanguage}
           >
             <img src="/assets/translateIcon.png" alt="translate" className="w-5" />
-            <span>{t("navbar.langSwitch")}</span>
+            <span className="leading-[200%]">{t("navbar.langSwitch")}</span>
           </div>
         </div>
       )}
