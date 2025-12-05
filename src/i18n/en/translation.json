@@ -22,6 +22,59 @@
       "button":"Learn more"
     }
   },
+   "services":{
+    "subHeading":"Our Services",
+    "desc":"We offer comprehensive logistics services to ensure your goods arrive safely and on time. Choose the service you need, and our team will handle everything efficiently",
+    "cards":{
+      "cardOne":{
+        "img":"/assets/gridImageTwo.png",
+        "title":"Parcel Delivery",
+        "desc":"Fast and reliable parcel delivery with tracking and secure handling for every shipment",
+        "button":"More details"
+      },
+      "cardTwo":{
+        "img":"/assets/gridImageOne.png",
+        "title":"Customs Clearance",
+        "desc":"Smooth customs clearance handled by experts to reduce delays and ensure compliance",
+        "button":"More details"
+      },
+      "cardThree":{
+        "img":"/assets/gridImageFour.png",
+        "title":"Storage Services",
+        "desc":"Safe, well-organized storage facilities that keep your goods protected and easy to manage",
+        "button":"More details"
+      },
+      "cardFour":{
+        "img":"/assets/gridImageThree.png",
+        "title":"Dry and Cold Transport",
+        "desc":"Temperature-controlled and dry cargo transport to maintain the quality of your products during transit",
+        "button":"More details"
+      }
+    }
+  },
+  "whyus":{
+    "subHeading":"Added Value",
+    "title":"Why choose us?",
+    "desc":"Because the success of your shipment begins with a logistics partner who understands your needs.",
+    "benefitCards":{
+      "cardOne":{
+        "heading":"Specialized Team",
+        "desc":"A professional team with expertise in shipping management, customs clearance, and distribution"
+      },
+      "cardTwo":{
+        "heading":"Competitive Prices",
+        "desc":"We provide the best solutions with top quality at prices suitable for all types of businesses"
+      },
+      "cardThree":{
+        "heading":"Continuous Support",
+        "desc":"Technical support and customer service available 24/7 to track your shipments and answer all your inquiries"
+      },
+      "cardFour":{
+        "heading":"Commitment to Timeliness",
+        "desc":"We ensure that shipments are delivered on time with continuous monitoring throughout the journey"
+      }
+    }
+  },
   "footer":{
     "desc":"A top logistics firm offering global shipping, storage, and supply chain services",
     "linkOne":"Quick Links",

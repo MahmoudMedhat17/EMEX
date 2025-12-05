@@ -1,26 +1,27 @@
 export const servicesData = [
     {
-        img: "assets/gridImageOne.png",
-        title: "التخليص الجمركي",
-        desc: "نساعدك في إنهاء جميع إجراءات التخليص الجمركي بدون تعقيد، وبأقل وقت ممكن لتسهيل حركة البضائع.",
-        btn: "المزيد من التفاصيل"
+        img: "services.cards.cardTwo.img",
+        title: "services.cards.cardTwo.title",
+        desc: "services.cards.cardTwo.desc",
+        btn: "services.cards.cardTwo.button"
     },
     {
-        img: "/assets/gridImageTwo.png",
-        title: "توصيل الطرود",
-        desc: "نوفّر خدمة توصيل طرود سريعة وآمنة داخل المدن وخارجها مع تتبّع كامل وخيارات تسليم مرنة.",
-        btn: "المزيد من التفاصيل"
-    },
-    {
-        img: "/assets/gridImageThree.png",
-        title: "النقل الجاف والبارد",
-        desc: "خدمة نقل جاف موثوقة لنقل مختلف أنواع البضائع بأمان تام، من خلال أسطول مجهّز وفريق محترف.",
-        btn: "المزيد من التفاصيل"
+        img: "services.cards.cardOne.img",
+        title: "services.cards.cardOne.title",
+        desc: "services.cards.cardOne.desc",
+        btn: "services.cards.cardOne.button"
     },
      {
-        img: "/assets/gridImageFour.png",
-        title: "خدمات التخزين",
-        desc: "نوفر حلول تخزين آمنة تساعدك في إدارة بضائعك بكفاءة، مع مساحات مجهزة ونظام متابعة دقيقة.",
-        btn: "المزيد من التفاصيل"
+        img: "services.cards.cardFour.img",
+        title: "services.cards.cardFour.title",
+        desc: "services.cards.cardFour.desc",
+        btn: "services.cards.cardFour.button"
+    }
+    ,
+    {
+        img: "services.cards.cardThree.img",
+        title: "services.cards.cardThree.title",
+        desc: "services.cards.cardThree.desc",
+        btn: "services.cards.cardThree.button"
     }
 ]

@@ -6,7 +6,6 @@ const Hero = () => {
 
   const { t, i18n } = useTranslation();
 
-
   const isArabic = i18n.language === "ar";
 
   const direction = isArabic ? "rtl" : "ltr";
