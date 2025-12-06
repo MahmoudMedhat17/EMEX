@@ -1,0 +1,26 @@
+{
+    "aboutHero":{
+    "title":"About Us",
+    "desc":"Learn more about Femex Logistics Services Company"
+  },
+  "services":{
+    "desc":"FEMEX views logistics as key to success, not merely transport and storage. We provide essential Services:",
+    "ourServices":{
+      "serviceOne":"Parcel delivery",
+      "serviceTwo":"Dry and refrigerated transportation",
+      "serviceThree":"Storage service",
+      "serviceFour":"Customs clearance"
+    },
+    "button":"Book Your Service"
+  },
+   "ourVision":{
+    "cardOne":{
+      "title":"Our message",
+      "desc":"Helping individuals and companies manage logistics operations easily and safely with practical, reliable solutions that adapt to their needs."
+    },
+    "cardTwo":{
+      "title":"Our vision",
+      "desc":"We aim to be the region's most trusted logistics partner by developing a modern service system that uses technology and focuses on customer needs."
+    }
+  }
+}

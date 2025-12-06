@@ -4,20 +4,18 @@ import { useTranslation } from 'react-i18next';
 
 const About = () => {
 
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("Home");
 
 
   const isArabic = i18n.language === "ar";
 
   const direction = isArabic ? "rtl" : "lft";
 
-  console.log(direction)
-
 
   return (
     <section className="py-[92px] flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]" dir={direction}>
       <div className="flex flex-col space-y-4">
-        <p className="text-primaryDark text-lg font-semibold smallLineHeight">
+        <p className="text-primaryDark text-lg font-semibold smallLineHeight rounded-lg">
           {t("about.subHeading")}
         </p>
         {

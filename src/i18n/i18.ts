@@ -1,7 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import en from "@/i18n/en/translation.json";
-import ar from "@/i18n/ar/translation.json";
+import { HomeEn, HomeAr, AboutEn, AboutAr } from "@/i18n/index";
 
 
 // the translations
@@ -9,10 +8,12 @@ import ar from "@/i18n/ar/translation.json";
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
-    translation: en
+    Home: HomeEn,
+    About:AboutEn
   },
   ar: {
-    translation: ar
+    Home: HomeAr,
+    About:AboutAr
   }
 };
 
@@ -20,7 +21,9 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "en", 
+    lng: "ar",
+    fallbackLng:"en",
+    ns:["Home","About"],
 
     interpolation: {
       escapeValue: false // react already safes from xss
