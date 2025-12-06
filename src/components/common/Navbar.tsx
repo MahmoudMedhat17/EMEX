@@ -30,7 +30,11 @@ const Navbar = () => {
 
           <nav className="hidden md:flex items-center gap-10 w-full relative">
             <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">{t("navbar.home")}</span>
-            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">{t("navbar.about")}</span>
+            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">
+              <Link to="/about">
+                {t("navbar.about")}
+              </Link>
+            </span>
             <div className="flex items-center justify-center gap-1.5 h-16 group">
               <div className="absolute top-16 bg-neutralWhite w-fit space-y-4 py-4 px-2 hidden group-hover:block shadow-lg">
                 <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
@@ -101,7 +105,11 @@ const Navbar = () => {
       {openMenu && (
         <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
           <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.home")}</span>
-          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.about")}</span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">
+            <Link to="/about">
+              {t("navbar.about")}
+            </Link>
+          </span>
           <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.services")}</span>
           <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.contact")}</span>
 
