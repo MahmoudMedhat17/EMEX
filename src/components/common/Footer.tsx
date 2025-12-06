@@ -22,7 +22,9 @@ const Footer = () => {
       <div className="mx-auto  space-y-8 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px] py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div>
-            <img src="/assets/footerLogo.png" alt="EMEX-logo" className="w-[126px] h-[100px]"/>
+            <Link to={"/"}>
+              <img src="/assets/footerLogo.png" alt="EMEX-logo" className="w-[126px] h-[100px]" />
+            </Link>
 
             <p className="mt-4 max-w-xs text-neutralWhite highLineHeight">
               {t("footer.desc")}
@@ -61,7 +63,9 @@ const Footer = () => {
                 {t("footer.home")}
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
-                {t("footer.whoWeAre")}
+                <Link to="/about">
+                  {t("footer.whoWeAre")}
+                </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
                 {t("footer.contact")}

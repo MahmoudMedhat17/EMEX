@@ -15,8 +15,8 @@ const OurVision = () => {
         <section dir={direction} className="pt-16">
             <div className={`flex flex-col ${isArabic ? "lg:flex-row" : "lg:flex-row-reverse"}  justify-between items-center gap-12 lg:gap-16 w-full`}>
                 <div className="w-full lg:w-1/2">
-                    <div className={`flex ${isArabic ? "flex-row-reverse" : "flex-row"}  items-start xl:items-center justify-between gap-6 mb-6`}>
-                        <h3 className="px-10 py-2 bg-primarySoft text-primaryDark font-semibold text-[32px] midLineHeight">
+                    <div className={`flex flex-row items-start xl:items-center justify-between gap-6 mb-6`}>
+                        <h3 className="px-4 py-1 bg-primarySoft text-primaryDark font-semibold text-[32px] midLineHeight">
                             {t("ourVision.cardTwo.title")}
                         </h3>
                         {
@@ -37,8 +37,8 @@ const OurVision = () => {
                     <img src="/assets/visionTwo.png" className="w-full h-[254px] object-center rounded-lg" />
                 </div>
                 <div className="w-full lg:w-1/2">
-                    <div className={`flex ${isArabic ? "flex-row-reverse" : "flex-row"} items-start xl:items-center gap-6 mb-6`}>
-                        <h3 className="px-10 py-2 bg-primarySoft text-primaryDark font-semibold text-[32px] midLineHeight">
+                    <div className={`flex flex-row items-start xl:items-center gap-6 mb-6`}>
+                        <h3 className="px-4 py-1 bg-primarySoft text-primaryDark font-semibold text-[32px] midLineHeight">
                             {t("ourVision.cardOne.title")}
                         </h3>
                         {

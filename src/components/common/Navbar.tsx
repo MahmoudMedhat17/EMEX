@@ -114,7 +114,7 @@ const Navbar = () => {
             onClick={handleLanguage}
           >
             <img src="/assets/translateIcon.png" alt="translate" className="w-5" />
-            <span className="leading-[200%]">{t("navbar.langSwitch")}</span>
+            <span className="highLineHeight">{t("navbar.langSwitch")}</span>
           </div>
         </div>
       )}
