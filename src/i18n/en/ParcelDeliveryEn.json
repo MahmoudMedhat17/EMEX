@@ -16,5 +16,31 @@
             "descThree":"SMS/WhatsApp notifications upon pickup and delivery",
             "descFour":"Hand delivered with electronic signature upon receipt"
         }
+    },
+    "howItWorks":{
+        "title":"How does parcel delivery work?",
+        "desc":"A system of simple and easy steps to ensure a distinctive and reliable delivery experience",
+        "Cards":{
+            "cardOne":{
+                "number":1,
+                "heading":"Register the request",
+                "desc":"Add parcel data and specify the receiving location"
+            },
+            "cardTwo":{
+                "number":2,
+                "heading":"Receiving the package",
+                "desc":"The driver picks up the package from your company"
+            },
+            "cardThree":{
+                "number":3,
+                "heading":"Preparing and transporting",
+                "desc":"The parcel is sorted and the fastest route for delivery is determined"
+            },
+            "cardFour":{
+                "number":4,
+                "heading":"Delivery to the customer",
+                "desc":"Hand delivered with electronic signature and status updated instantly"
+            }
+        }
     }
 }

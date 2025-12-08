@@ -112,9 +112,20 @@ const Footer = () => {
               </li>
               <li className="text-neutralLightGray flex items-center gap-2">
                 <img src="/assets/phoneIcon.png" alt="phoneIcon" />
-                <span className="hover:text-primaryMain duration-500 cursor-default">
-                  (+966) 596003377
-                </span>
+                {
+                  isArabic ?
+                    (
+                      <span className="hover:text-primaryMain duration-500 cursor-default">
+                        596003377 (966+)
+                      </span>
+                    )
+                    :
+                    (
+                      <span className="hover:text-primaryMain duration-500 cursor-default">
+                        (+966) 596003377
+                      </span>
+                    )
+                }
               </li>
             </ul>
           </div>
