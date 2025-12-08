@@ -1,0 +1,20 @@
+{
+    "hero":{
+        "title":"Parcel delivery",
+        "desc":"Enjoy a fast and reliable delivery service that ensures your shipments arrive safely and on time",
+        "button":"Book Your Service"
+    },
+    "parcelDesc":{
+        "title":"Deliver packages <span>quickly and safely</span> to your customer",
+        "desc":"Parcel delivery service offers you an easy, safe way to send any package from point to another, with full tracking for every step. We receive, prepare, transport, then deliver to the desired destination accurately and on time. The service suits any activity needing reliable, fast transport solutions without any complexity"
+    },
+    "parcelFeatures":{
+        "title":"Discover why Femex is your <span>top choice</span> for parcel delivery",
+        "desc":{
+            "descOne":"Fast delivery within the same day or within 24-48 hours",
+            "descTwo":"Professional drivers trained to handle sensitive shipments",
+            "descThree":"SMS/WhatsApp notifications upon pickup and delivery",
+            "descFour":"Hand delivered with electronic signature upon receipt"
+        }
+    }
+}

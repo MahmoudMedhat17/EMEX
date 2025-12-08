@@ -14,15 +14,15 @@ const Services = () => {
 
 
     return (
-        <section dir={direction} className="pt-16 flex flex-col lg:flex-row-reverse justify-between items-center gap-[60px] lg:gap-[120px]">
-            <div className="w-full">
-                <img src="/assets/servicesTruck.png" className="rounded-2xl w-full h-[453px] object-cover" />
+        <section dir={direction} className="pt-16 flex flex-col-reverse lg:flex-row-reverse justify-between items-center gap-[60px] lg:gap-[120px]">
+            <div className="w-full h-[453px]">
+                <img src="/assets/servicesTruck.png" className="rounded-2xl w-full h-[453px] object-center" />
             </div>
             <div className="flex flex-col lg:max-w-[612px]">
                 {
                     isArabic ?
                         (
-                            <h2 className="text-[40px] font-semibold smallLineHeight mb-4">
+                            <h2 className="text-[40px] font-semibold midLineHeight  mb-4">
                                 نقدم حلول <span className="text-primaryMain">لوجستية حديثة</span> تساعدك تنمّي عملك بثبات
                             </h2>
                         )
