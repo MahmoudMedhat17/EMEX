@@ -1,5 +1,5 @@
 import { servicesData } from "@/data/ServicesData";
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 
 const Services = () => {
@@ -36,20 +36,9 @@ const Services = () => {
         <p className="bg-primarySoft text-primaryDark py-2 px-4 rounded-lg text-lg w-fit font-semibold smallLineHeight">
           {t("services.subHeading")}
         </p>
-        {
-          isArabic === "ar" ?
-            (
-              <h2 className="text-[40px] font-semibold text-center smallLineHeight">
-                حلول <span className="text-primaryMain">متنوعة</span> تلبي احتياجات عملك
-              </h2>
-            )
-            :
-            (
-              <h2 className="text-[40px] font-semibold text-center smallLineHeight">
-                <span className="text-primaryMain">Diverse solutions</span> that meet your business needs
-              </h2>
-            )
-        }
+        <h2 className="text-[40px] font-semibold text-center smallLineHeight">
+          <Trans i18nKey={"services.title"} components={{ span: <span className="text-primaryMain" /> }} />
+        </h2>
         <p className="font-normal text-lg text-neutralLightGray max-w-[644px] text-center highLineHeight">
           {t("services.desc")}
         </p>

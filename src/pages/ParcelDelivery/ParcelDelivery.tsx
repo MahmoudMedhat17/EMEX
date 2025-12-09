@@ -2,6 +2,7 @@ import Hero from "@/pages/ParcelDelivery/Hero";
 import Description from "@/pages/ParcelDelivery/Description";
 import Features from "@/pages/ParcelDelivery/Features";
 import HowItWorks from "@/components/common/HowItWorks/HowItWorks";
+import CommonQuestions from "@/components/common/Questions/CommonQuestions";
 
 const ParcelDelivery = () => {
     return (
@@ -11,6 +12,7 @@ const ParcelDelivery = () => {
                 <Description />
                 <Features />
                 <HowItWorks />
+                <CommonQuestions />
             </div>
         </>
     )

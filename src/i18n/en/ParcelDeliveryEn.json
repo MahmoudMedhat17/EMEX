@@ -42,5 +42,31 @@
                 "desc":"Hand delivered with electronic signature and status updated instantly"
             }
         }
+    },
+    "commonQuestions":{
+        "desc":"FAQ's",
+        "title":"Questions about the parcel delivery service",
+        "questions":{
+            "questionOne":{
+                "question":"Can I track the status of the package?",
+                "answer":"Yes, we provide you with a dedicated tracking link that shows the status of the shipment, moment by moment"
+            },
+            "questionTwo":{
+                "question":"What is the delivery time?",
+                "answer":"Delivery within the city within the same day or within 24-48 hours depending on pressure and distance"
+            },
+            "questionThree":{
+                "question":"Is there a minimum number of packages?",
+                "answer":"No, you can ship one package or hundreds of packages depending on your needs"
+            },
+            "questionFour":{
+                "question":"Can I deliver international packages?",
+                "answer":"Yes, you can deliver international packages, whether one or several packages, depending on your needs"
+            },
+            "questionFive":{
+                "question":"How much does delivery cost?",
+                "answer":"The cost depends on the city and weight. You can get the price immediately by contacting us"
+            }
+        }
     }
 }

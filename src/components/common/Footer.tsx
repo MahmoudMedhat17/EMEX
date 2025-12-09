@@ -60,7 +60,9 @@ const Footer = () => {
             </p>
             <ul className="space-y-4">
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
-                {t("footer.home")}
+                <Link to="/">
+                  {t("footer.home")}
+                </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
                 <Link to="/about">
@@ -79,7 +81,9 @@ const Footer = () => {
             </p>
             <ul className="space-y-4">
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
-                {t("footer.parcelDelivery")}
+                <Link to="/parcelDelivery">
+                  {t("footer.parcelDelivery")}
+                </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
                 {t("footer.dryAndRefrigeratedTransport")}
