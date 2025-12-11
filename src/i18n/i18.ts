@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr } from "@/i18n/index";
+import { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServicesEn, StorageServicesAr } from "@/i18n/index";
 
 
 // the translations
@@ -11,13 +11,15 @@ const resources = {
     Home: HomeEn,
     About: AboutEn,
     ParcelDelivery: ParcelDeliveryEn,
-    CustomsClearance:CustomsClearanceEn
+    CustomsClearance: CustomsClearanceEn,
+    StorageServices: StorageServicesEn
   },
   ar: {
     Home: HomeAr,
     About: AboutAr,
     ParcelDelivery: ParcelDeliveryAr,
-    CustomsClearance:CustomsClearanceAr 
+    CustomsClearance: CustomsClearanceAr,
+    StorageServices: StorageServicesAr
   }
 };
 

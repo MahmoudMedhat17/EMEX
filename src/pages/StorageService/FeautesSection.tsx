@@ -9,7 +9,7 @@ interface IFeatures {
 
 const FeaturesSection = ({ img, Ttitle }: IFeatures) => {
 
-    const { t } = useTranslation("CustomsClearance");
+    const { t } = useTranslation("StorageServices");
 
 
     return (
@@ -20,10 +20,10 @@ const FeaturesSection = ({ img, Ttitle }: IFeatures) => {
                     <Trans i18nKey={Ttitle} components={{ span: <span className="text-primaryMain" /> }} />
                 </h2>
                 <div className="space-y-4">
-                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("customsClearanceFeatures.desc.descOne")} />
-                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("customsClearanceFeatures.desc.descTwo")} />
-                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("customsClearanceFeatures.desc.descThree")} />
-                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("customsClearanceFeatures.desc.descFour")} />
+                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("storageServicesFeatures.desc.descOne")} />
+                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("storageServicesFeatures.desc.descTwo")} />
+                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("storageServicesFeatures.desc.descThree")} />
+                    <FeaturesComp icon="/assets/primeVerified.png" Tdesc={t("storageServicesFeatures.desc.descFour")} />
                 </div>
             </div>
         </section>

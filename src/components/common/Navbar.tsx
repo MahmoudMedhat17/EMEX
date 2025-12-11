@@ -20,7 +20,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="bg-white shadow" dir={direction}>
+    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-99 w-full" dir={direction}>
       <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px]">
 
         <div className="flex items-center lg:gap-[50px] xl:gap-[88px]">

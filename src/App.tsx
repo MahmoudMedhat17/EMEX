@@ -4,6 +4,7 @@ import Home from "@/pages/Home/Home";
 import About from "@/pages/About/About";
 import ParcelDelivery from "@/pages/ParcelDelivery/ParcelDelivery";
 import CustomsClearance from "@/pages/CustomsClearance/CustomsClearance";
+import StorageService from "@/pages/StorageService/StorageService";
 
 const App = () => {
 
@@ -26,6 +27,10 @@ const App = () => {
         {
           path: "/customsClearance",
           element: <CustomsClearance />
+        },
+        {
+          path: "/storageServices",
+          element: <StorageService />
         }
       ]
     }
