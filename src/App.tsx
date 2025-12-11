@@ -3,6 +3,7 @@ import Mainlayout from "./layout/Mainlayout";
 import Home from "@/pages/Home/Home";
 import About from "@/pages/About/About";
 import ParcelDelivery from "@/pages/ParcelDelivery/ParcelDelivery";
+import CustomsClearance from "@/pages/CustomsClearance/CustomsClearance";
 
 const App = () => {
 
@@ -21,6 +22,10 @@ const App = () => {
         {
           path: "/parcelDelivery",
           element: <ParcelDelivery />
+        },
+        {
+          path: "/customsClearance",
+          element: <CustomsClearance />
         }
       ]
     }

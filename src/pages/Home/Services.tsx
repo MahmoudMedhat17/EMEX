@@ -31,7 +31,7 @@ const Services = () => {
 
 
   return (
-    <section dir={direction}>
+    <section dir={direction} className="py-8 md:py-16"> 
       <div className="flex flex-col justify-center items-center space-y-4">
         <p className="bg-primarySoft text-primaryDark py-2 px-4 rounded-lg text-lg w-fit font-semibold smallLineHeight">
           {t("services.subHeading")}

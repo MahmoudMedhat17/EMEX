@@ -1,5 +1,5 @@
 import { aboutServicesData } from "@/data/AboutServicesData";
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 
 const Services = () => {
@@ -14,25 +14,14 @@ const Services = () => {
 
 
     return (
-        <section dir={direction} className="pt-16 flex flex-col-reverse lg:flex-row-reverse justify-between items-center gap-[60px] lg:gap-[120px]">
-            <div className="w-full h-[453px]">
-                <img src="/assets/servicesTruck.png" className="rounded-2xl w-full h-[453px] object-center" />
+        <section dir={direction} className="py-8 md:py-16 flex flex-col-reverse lg:flex-row-reverse justify-between items-center gap-[60px] lg:gap-[120px]">
+            <div className="w-full xl:w-1/3 md:h-[453px]">
+                <img src="/assets/servicesTruck.png" className="rounded-2xl w-full md:h-[453px] object-contain md:object-cover" />
             </div>
             <div className="flex flex-col lg:max-w-[612px]">
-                {
-                    isArabic ?
-                        (
-                            <h2 className="text-[40px] font-semibold midLineHeight  mb-4">
-                                نقدم حلول <span className="text-primaryMain">لوجستية حديثة</span> تساعدك تنمّي عملك بثبات
-                            </h2>
-                        )
-                        :
-                        (
-                            <h2 className="text-[40px] font-semibold smallLineHeight mb-4">
-                                We provide logistics solutions to help your <span className="text-primaryMain">business grow</span>
-                            </h2>
-                        )
-                }
+                <h2 className="text-[40px] font-semibold midLineHeight  mb-4">
+                    <Trans i18nKey={t("services.title")} components={{ span: <span className="text-primaryMain" /> }} />
+                </h2>
                 <p className="text-[18px] text-neutralDarkGray highLineHeight mb-4">
                     {t("services.desc")}
                 </p>

@@ -68,5 +68,10 @@
                 "answer":"The cost depends on the city and weight. You can get the price immediately by contacting us"
             }
         }
+    },
+    "readyParcel":{
+        "title":"Ready to start with us?",
+        "desc":"Book your parcel delivery now and get fast, secure, real-time shipment updates",
+        "button":"Book your service now"
     }
 }

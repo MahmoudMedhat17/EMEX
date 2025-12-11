@@ -4,7 +4,7 @@ import DescSection from "@/components/common/DescSection";
 
 const Description = () => {
 
-    const { t, i18n } = useTranslation("ParcelDelivery");
+    const { t, i18n } = useTranslation("CustomsClearance");
 
     const isArabic = i18n.language === "ar";
 
@@ -12,8 +12,8 @@ const Description = () => {
 
 
     return (
-        <section dir={direction} className='py-8 md:py-16'>
-            <DescSection img="/assets/parcelDesc.png" Ttitle={t("parcelDesc.title")} Tdesc={t("parcelDesc.desc")} />
+        <section dir={direction} className='py-16'>
+            <DescSection img="/assets/customsClearanceAbout.png" Ttitle={t("customsClearanceDesc.title")} Tdesc={t("customsClearanceDesc.desc")} />
         </section>
     )
 }

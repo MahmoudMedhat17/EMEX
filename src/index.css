@@ -21,7 +21,7 @@
 }
 
 @utility bg-ready-section{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),  url("/assets/readyPic.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),  var(--bgImage);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -36,5 +36,5 @@
 }
 
 @utility smallLineHeight{
-    line-height:100%;
+    line-height:110%;
 }

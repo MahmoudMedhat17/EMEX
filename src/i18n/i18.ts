@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr } from "@/i18n/index";
+import { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr } from "@/i18n/index";
 
 
 // the translations
@@ -10,13 +10,14 @@ const resources = {
   en: {
     Home: HomeEn,
     About: AboutEn,
-    ParcelDelivery: ParcelDeliveryEn
+    ParcelDelivery: ParcelDeliveryEn,
+    CustomsClearance:CustomsClearanceEn
   },
   ar: {
     Home: HomeAr,
     About: AboutAr,
-    ParcelDelivery: ParcelDeliveryAr
-    
+    ParcelDelivery: ParcelDeliveryAr,
+    CustomsClearance:CustomsClearanceAr 
   }
 };
 
@@ -26,7 +27,7 @@ i18n
     resources,
     lng: "ar",
     fallbackLng:"en",
-    ns:["Home","About"],
+    ns:["Home","About","ParcelDelivery","CustomsClearance"],
 
     interpolation: {
       escapeValue: false // react already safes from xss

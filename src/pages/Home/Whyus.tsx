@@ -18,7 +18,7 @@ const Whyus = () => {
 
 
   return (
-    <section dir={direction} className={`flex flex-col ${isArabic ? "lg:flex-row-reverse" : "lg:flex-row-reverse"} justify-center items-start gap-12 lg:gap-4 pt-16 w-full`}>
+    <section dir={direction} className={`py-8 md:py-16 flex flex-col ${isArabic ? "lg:flex-row-reverse" : "lg:flex-row-reverse"} justify-center items-start gap-12 lg:gap-4 pt-16 w-full`}>
       <div className="order-2 lg:order-1 w-full lg:w-[75%] space-y-4">
         <Benefits Ttitle={t(`${cardOnePath}.heading`)} Tdesc={t(`${cardOnePath}.desc`)} />
         <Benefits Ttitle={t(`${cardTwoPath}.heading`)} Tdesc={t(`${cardTwoPath}.desc`)} />

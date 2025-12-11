@@ -4,6 +4,7 @@
     "desc":"Learn more about Femex Logistics Services Company"
   },
   "services":{
+    "title":"We provide logistics solutions to help your <span>business grow</span>",
     "desc":"FEMEX views logistics as key to success, not merely transport and storage. We provide essential Services:",
     "ourServices":{
       "serviceOne":"Parcel delivery",

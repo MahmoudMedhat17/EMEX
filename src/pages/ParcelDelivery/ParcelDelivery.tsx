@@ -1,8 +1,9 @@
 import Hero from "@/pages/ParcelDelivery/Hero";
 import Description from "@/pages/ParcelDelivery/Description";
 import Features from "@/pages/ParcelDelivery/Features";
-import HowItWorks from "@/components/common/HowItWorks/HowItWorks";
-import CommonQuestions from "@/components/common/Questions/CommonQuestions";
+import HowItWorks from "@/pages/ParcelDelivery/HowItWorks";
+import CommonQuestions from "@/pages/ParcelDelivery/CommonQuestions";
+import ReadyParcel from "@/pages/ParcelDelivery/ReadyParcel";
 
 const ParcelDelivery = () => {
     return (
@@ -14,6 +15,7 @@ const ParcelDelivery = () => {
                 <HowItWorks />
                 <CommonQuestions />
             </div>
+            <ReadyParcel />
         </>
     )
 }

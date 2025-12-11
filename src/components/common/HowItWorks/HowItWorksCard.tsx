@@ -15,7 +15,7 @@ const Card = ({ Tnumber, Theading, Tdesc }: ICards) => {
                 </div>
                 <div className="space-y-2">
                     <h4 className="text-[20px] font-semibold midLineHeight">{Theading}</h4>
-                    <p className="text-[16px] text-neutralLightGray group-hover:text-black duration-400 leading-6">{Tdesc}</p>
+                    <p className="text-[16px] text-neutralLightGray group-hover:text-black duration-400 highLineHeight">{Tdesc}</p>
                 </div>
             </div>
         </section>

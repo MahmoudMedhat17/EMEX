@@ -70,7 +70,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
-                {t("footer.contact")}
+                <Link to="/contact">
+                  {t("footer.contact")}
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,13 +88,19 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
-                {t("footer.dryAndRefrigeratedTransport")}
+                <Link to="/dryAndRefrigeratedTransport">
+                  {t("footer.dryAndRefrigeratedTransport")}
+                </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
-                {t("footer.storageServices")}
+                <Link to="/storageServices">
+                  {t("footer.storageServices")}
+                </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
-                {t("footer.customsClearance")}
+                <Link to="/customsClearance">
+                  {t("footer.customsClearance")}
+                </Link>
               </li>
             </ul>
           </div>

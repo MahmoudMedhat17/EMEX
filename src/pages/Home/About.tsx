@@ -13,7 +13,7 @@ const About = () => {
 
 
   return (
-    <section className="py-[92px] flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]" dir={direction}>
+    <section className="py-8 md:py-16 flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]" dir={direction}>
       <div className="flex flex-col space-y-4">
         <p className="text-primaryDark text-lg font-semibold smallLineHeight rounded-lg">
           {t("about.subHeading")}
