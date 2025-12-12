@@ -88,12 +88,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
-                <Link to="/dryAndRefrigeratedTransport">
+                <Link to="/dryRefrigeratedTransport">
                   {t("footer.dryAndRefrigeratedTransport")}
                 </Link>
               </li>
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
-                <Link to="/storageServices">
+                <Link to="/storageService">
                   {t("footer.storageServices")}
                 </Link>
               </li>

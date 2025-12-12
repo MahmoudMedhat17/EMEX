@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import FeaturesSection from '@/pages/StorageService/FeautesSection';
+import FeaturesSection from '@/pages/StorageService/FeaturesSection';
 
 const Features = () => {
 
 
-    const { t, i18n } = useTranslation("StorageServices");
+    const { t, i18n } = useTranslation("StorageService");
 
     const isArabic = i18n.language === "ar";
 

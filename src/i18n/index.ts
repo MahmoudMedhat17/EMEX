@@ -6,9 +6,11 @@ import ParcelDeliveryEn from "@/i18n/en/ParcelDeliveryEn.json";
 import ParcelDeliveryAr from "@/i18n/ar/ParcelDeliveryAr.json";
 import CustomsClearanceEn from "@/i18n/en/CustomsClearanceEn.json";
 import CustomsClearanceAr from "@/i18n/ar/CustomsClearanceAr.json";
-import StorageServicesEn from "@/i18n/en/StorageServicesEn.json";
-import StorageServicesAr from "@/i18n/ar/StorageServicesAr.json";
+import StorageServiceEn from "@/i18n/en/StorageServiceEn.json";
+import StorageServiceAr from "@/i18n/ar/StorageServiceAr.json";
+import DryRefrigeratedTransportEn from "@/i18n/en/DryRefrigeratedTransportEn.json";
+import DryRefrigeratedTransportAr from "@/i18n/ar/DryRefrigeratedTransportAr.json";
 
 
 
-export { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServicesEn, StorageServicesAr };
+export { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServiceEn, StorageServiceAr, DryRefrigeratedTransportEn, DryRefrigeratedTransportAr };

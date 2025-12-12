@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Hero = () => {
 
 
-    const { t, i18n } = useTranslation("StorageServices");
+    const { t, i18n } = useTranslation("StorageService");
 
     const isArabic = i18n.language === "ar";
 
@@ -16,7 +16,7 @@ const Hero = () => {
         <section dir={direction} className="relative h-[400px] w-full overflow-hidden">
 
             <img
-                src="/assets/parcelDelivery.png"
+                src="/assets/storageServiceHero.png"
                 className="absolute inset-0 w-full h-[400px] object-cover"
             />
 

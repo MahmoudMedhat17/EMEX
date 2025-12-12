@@ -4,7 +4,7 @@ import DescSection from "@/components/common/DescSection";
 
 const Description = () => {
 
-    const { t, i18n } = useTranslation("StorageServices");
+    const { t, i18n } = useTranslation("StorageService");
 
     const isArabic = i18n.language === "ar";
 
