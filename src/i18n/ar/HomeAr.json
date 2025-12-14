@@ -5,7 +5,13 @@
     "services": "خدماتنا",
     "contact": "تواصل معنا",
     "order": "اطلب خدمتك",
-    "langSwitch": "English"
+    "langSwitch": "English",
+    "dropDownMenu":{
+      "parcelDelivery":"توصيل الطرود",
+      "dryRefrigeratedTransport":"النقل الجاف والمبرد",
+      "storageService":"خدمه التحزين",
+      "customsClearance":"تخليص جمركي"
+    }
   },
   "hero":{
     "title":"حلول لوجستية موثوقة تدعم نمو أعمالك",

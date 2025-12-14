@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { useTranslation } from 'react-i18next';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import ScrollToTop from "@/utils/ScrollToTop";
 
 
 const Navbar = () => {
 
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("Home");
   const [openMenu, setOpenMenu] = useState(false);
+  const [mobServices, setMobServices] = useState(false);
 
   const handleLanguage = () => {
     i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar");
@@ -17,37 +19,53 @@ const Navbar = () => {
 
   const direction = isArabic ? "rtl" : "ltr";
 
+  const handleLinkCloseClick = () => {
+    setOpenMenu((prev) => !prev);
+  };
 
+  // Need to create an active link in the navbar.
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-99 w-full" dir={direction}>
       <div className="mx-auto flex items-center justify-between h-16 px-6 md:px-[50px] lg:px-[70px] xl:px-[100px]">
 
         <div className="flex items-center lg:gap-[50px] xl:gap-[88px]">
-          <Link to="/">
-            <img src="/assets/logo.png" alt="logo" className="w-24" />
+          <Link onClick={ScrollToTop} to="/">
+            <img src="/assets/logo.png" alt="logo" className="w-[72px] lg:w-24" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-10 w-full relative">
-            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">{t("navbar.home")}</span>
+          <nav className="hidden lg:flex items-center gap-10 w-full relative">
+            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">
+              <Link to="/">
+                {t("navbar.home")}
+              </Link>
+            </span>
             <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">
               <Link to="/about">
                 {t("navbar.about")}
               </Link>
             </span>
             <div className="flex items-center justify-center gap-1.5 h-16 group">
-              <div className="absolute top-16 bg-neutralWhite w-fit space-y-4 py-4 px-2 hidden group-hover:block shadow-lg">
-                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
-                  توصيل الطرود
+              <div className="absolute top-16 bg-neutralWhite w-1/2 space-y-4 py-4 hidden group-hover:block shadow-lg">
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
+                  <Link to="/parcelDelivery">
+                    {t("navbar.dropDownMenu.parcelDelivery")}
+                  </Link>
                 </p>
-                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
-                  النقل الجاف والمبرد
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
+                  <Link to="/dryRefrigeratedTransport">
+                    {t("navbar.dropDownMenu.dryRefrigeratedTransport")}
+                  </Link>
                 </p>
-                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
-                  خدمه التحزين
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
+                  <Link to="/storageService">
+                    {t("navbar.dropDownMenu.storageService")}
+                  </Link>
                 </p>
-                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight">
-                  تخليص جمركي
+                <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
+                  <Link to="/customsClearance">
+                    {t("navbar.dropDownMenu.customsClearance")}
+                  </Link>
                 </p>
               </div>
               {
@@ -67,13 +85,19 @@ const Navbar = () => {
                   )
               }
             </div>
-            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain highLineHeight">{t("navbar.contact")}</span>
+            <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain highLineHeight">
+              <Link to="/contact">
+                {t("navbar.contact")}
+              </Link>
+            </span>
           </nav>
         </div>
 
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <button className="cursor-pointer bg-primaryMain text-white hover:bg-primaryDark duration-500 px-4 py-1.5 rounded-lg smallLineHeight">
-            {t("navbar.order")}
+            <Link to="/contact">
+              {t("navbar.order")}
+            </Link>
           </button>
 
           <div onClick={handleLanguage} className="flex items-center gap-1 cursor-pointer">
@@ -83,7 +107,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="block md:hidden focus:outline-none"
+          className="block lg:hidden focus:outline-none"
           onClick={() => setOpenMenu(!openMenu)}
         >
           <svg
@@ -102,19 +126,76 @@ const Navbar = () => {
         </button>
       </div>
 
+
+
+      {/* Mobile view */}
       {openMenu && (
-        <div className={`md:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
-          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.home")}</span>
-          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">
-            <Link to="/about">
+        <div className={`lg:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain text-neutralLightGray duration-500 highLineHeight">
+            <Link to="/" onClick={handleLinkCloseClick}>
+              {t("navbar.home")}
+            </Link>
+          </span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain text-neutralLightGray duration-500 highLineHeight">
+            <Link to="/about" onClick={handleLinkCloseClick}>
               {t("navbar.about")}
             </Link>
           </span>
-          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.services")}</span>
-          <span className="w-fit block cursor-pointer hover:text-primaryMain duration-500 highLineHeight">{t("navbar.contact")}</span>
+
+          <span className=" block cursor-pointer hover:text-primaryMain duration-500 highLineHeight" onClick={() => setMobServices(!mobServices)}>
+            {
+              !isArabic ?
+                (
+                  <div className="cursor-pointer flex items-center text-neutralLightGray hover:text-primaryMain duration-500">
+                    <span className="highLineHeight">{t("navbar.services")}</span>
+                    <MdOutlineKeyboardArrowDown />
+                  </div>
+                )
+                :
+                (
+                  <div className="cursor-pointer flex items-center text-neutralLightGray hover:text-primaryMain duration-500">
+                    <span className="highLineHeight">{t("navbar.services")}</span>
+                    <MdOutlineKeyboardArrowDown />
+                  </div>
+                )
+            }
+            {
+              mobServices && (
+                <div onClick={handleLinkCloseClick} className={`w-full block space-y-4 py-4 text-start`}>
+                  <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
+                    <Link to="/parcelDelivery">
+                      {t("navbar.dropDownMenu.parcelDelivery")}
+                    </Link>
+                  </p>
+                  <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
+                    <Link to="/dryRefrigeratedTransport">
+                      {t("navbar.dropDownMenu.dryRefrigeratedTransport")}
+                    </Link>
+                  </p>
+                  <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
+                    <Link to="/storageService">
+                      {t("navbar.dropDownMenu.storageService")}
+                    </Link>
+                  </p>
+                  <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
+                    <Link to="/customsClearance">
+                      {t("navbar.dropDownMenu.customsClearance")}
+                    </Link>
+                  </p>
+                </div>
+              )
+            }
+          </span>
+          <span className="w-fit block cursor-pointer hover:text-primaryMain text-neutralLightGray duration-500 highLineHeight">
+            <Link to="/contact" onClick={handleLinkCloseClick}>
+              {t("navbar.contact")}
+            </Link>
+          </span>
 
           <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4 smallLineHeight">
-            {t("navbar.order")}
+            <Link to="/contact">
+              {t("navbar.order")}
+            </Link>
           </button>
 
           <div

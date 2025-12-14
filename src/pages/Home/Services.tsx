@@ -1,5 +1,6 @@
 import { servicesData } from "@/data/ServicesData";
 import { useTranslation, Trans } from 'react-i18next';
+import { Link } from "react-router";
 
 
 const Services = () => {
@@ -31,7 +32,7 @@ const Services = () => {
 
 
   return (
-    <section dir={direction} className="py-8 md:py-16"> 
+    <section id="services" dir={direction} className="py-8 md:py-16">
       <div className="flex flex-col justify-center items-center space-y-4">
         <p className="bg-primarySoft text-primaryDark py-2 px-4 rounded-lg text-lg w-fit font-semibold smallLineHeight">
           {t("services.subHeading")}
@@ -56,7 +57,9 @@ const Services = () => {
                   </p>
                 </div>
                 <button className="w-full bg-primarySoft text-primaryDark border border-primaryMain hover:bg-primaryDark hover:text-white duration-500 rounded-lg px-4 py-3 cursor-pointer smallLineHeight">
-                  {t(data.btn)}
+                  <Link to={data.route}>
+                    {t(data.btn)}
+                  </Link>
                 </button>
               </div>
             ))

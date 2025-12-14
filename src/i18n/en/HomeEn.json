@@ -5,7 +5,13 @@
     "services": "Services",
     "contact": "Contact us",
     "order": "Order",
-    "langSwitch": "العربية"
+    "langSwitch": "العربية",
+    "dropDownMenu":{
+      "parcelDelivery":"Parcel Delivery",
+      "dryRefrigeratedTransport":"Dry and Refrigerated Transport",
+      "storageService":"Storage Services",
+      "customsClearance":"Customs Clearance"
+    }
   },
   "hero":{
     "title":"Reliable logistics solutions support your business growth",

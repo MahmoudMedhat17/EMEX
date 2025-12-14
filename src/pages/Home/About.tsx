@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 
 
 
@@ -36,7 +37,9 @@ const About = () => {
           {t("about.desc")}
         </p>
         <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 cursor-pointer p-4 rounded-lg font-semibold smallLineHeight w-fit">
-          {t("about.buttons.button")}
+          <Link to="/about">
+            {t("about.buttons.button")}
+          </Link>
         </button>
       </div>
       <img src="assets/aboutImage.png" className="lg:w-[50%]" />

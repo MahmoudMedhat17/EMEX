@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
+import { Link } from 'react-router';
 
 
 const Hero = () => {
@@ -9,6 +9,16 @@ const Hero = () => {
   const isArabic = i18n.language === "ar";
 
   const direction = isArabic ? "rtl" : "ltr";
+
+
+  const scrollToServices = () => {
+
+    const section = document.getElementById("services");
+
+    if (section) {
+      section.scrollIntoView({ "behavior": "smooth" });
+    }
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden" dir={direction}>
@@ -45,9 +55,11 @@ const Hero = () => {
                 (
                   <>
                     <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 p-4 rounded-lg font-semibold cursor-pointer smallLineHeight">
-                      {t("hero.buttons.buttonRight")}
+                      <Link to="/contact">
+                        {t("hero.buttons.buttonRight")}
+                      </Link>
                     </button>
-                    <button className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 p-4 rounded-lg font-semibold cursor-pointer smallLineHeight">
+                    <button onClick={() => scrollToServices()} className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 p-4 rounded-lg font-semibold cursor-pointer smallLineHeight">
                       {t("hero.buttons.buttonLeft")}
                     </button>
                   </>

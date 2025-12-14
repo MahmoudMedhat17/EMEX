@@ -6,6 +6,7 @@ import ParcelDelivery from "@/pages/ParcelDelivery/ParcelDelivery";
 import CustomsClearance from "@/pages/CustomsClearance/CustomsClearance";
 import StorageService from "@/pages/StorageService/StorageService";
 import DryRefrigeratedTransport from "@/pages/DryRefrigeratedTransport/DryRefrigeratedTransport";
+import Contact from "@/pages/Contact/Contact";
 
 const App = () => {
 
@@ -36,6 +37,10 @@ const App = () => {
         {
           path: "/dryRefrigeratedTransport",
           element: <DryRefrigeratedTransport />
+        },
+        {
+          path: "/contact",
+          element: <Contact />
         }
       ]
     }

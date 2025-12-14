@@ -31,7 +31,7 @@ i18n
     resources,
     lng: "ar",
     fallbackLng:"en",
-    ns:["Home","About","ParcelDelivery","CustomsClearance"],
+    ns:["Home","About","ParcelDelivery","CustomsClearance","StorageService" , "DryRefrigeratedTransport"],
 
     interpolation: {
       escapeValue: false // react already safes from xss
