@@ -1,6 +1,6 @@
 import { aboutServicesData } from "@/data/AboutServicesData";
 import { useTranslation, Trans } from 'react-i18next';
-
+import { Link } from "react-router";
 
 const Services = () => {
 
@@ -38,7 +38,9 @@ const Services = () => {
                     }
                 </div>
                 <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 cursor-pointer p-4 rounded-lg font-semibold smallLineHeight w-fit">
-                    {t("services.button")}
+                    <Link to="/contact">
+                        {t("services.button")}
+                    </Link>
                 </button>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
+import { Link } from 'react-router';
 
 
 
@@ -22,7 +22,9 @@ const Ready = () => {
                     {t("readyParcel.desc")}
                 </p>
                 <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 cursor-pointer p-4 rounded-lg smallLineHeight">
-                    {t("readyParcel.button")}
+                    <Link to="/contact">
+                        {t("readyParcel.button")}
+                    </Link>
                 </button>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
+import { Link } from 'react-router';
 
 
 const Hero = () => {
@@ -17,7 +17,7 @@ const Hero = () => {
 
             <img
                 src="/assets/customsClearanceHero.png"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-[400px] object-cover"
             />
 
             <div className="absolute inset-0 bg-black/70 h-full"></div>
@@ -31,7 +31,9 @@ const Hero = () => {
                         {t("hero.desc")}
                     </p>
                     <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 cursor-pointer py-4 px-6 rounded-lg smallLineHeight">
-                        {t("hero.button")}
+                        <Link to="/contact">
+                            {t("hero.button")}
+                        </Link>
                     </button>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useTranslation } from 'react-i18next';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import ScrollToTop from "@/utils/ScrollToTop";
+import { ScrollToTop, NavlinkStyle } from "@/utils/index";
 
 
 const Navbar = () => {
@@ -36,36 +36,36 @@ const Navbar = () => {
 
           <nav className="hidden lg:flex items-center gap-10 w-full relative">
             <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">
-              <Link to="/">
+              <NavLink to="/" className={NavlinkStyle}>
                 {t("navbar.home")}
-              </Link>
+              </NavLink>
             </span>
             <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain duration-500 highLineHeight">
-              <Link to="/about">
+              <NavLink to="/about" className={NavlinkStyle}>
                 {t("navbar.about")}
-              </Link>
+              </NavLink>
             </span>
             <div className="flex items-center justify-center gap-1.5 h-16 group">
               <div className="absolute top-16 bg-neutralWhite w-1/2 space-y-4 py-4 hidden group-hover:block shadow-lg">
                 <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
-                  <Link to="/parcelDelivery">
+                  <NavLink to="/parcelDelivery" className={NavlinkStyle}>
                     {t("navbar.dropDownMenu.parcelDelivery")}
-                  </Link>
+                  </NavLink>
                 </p>
                 <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
-                  <Link to="/dryRefrigeratedTransport">
+                  <NavLink to="/dryRefrigeratedTransport" className={NavlinkStyle}>
                     {t("navbar.dropDownMenu.dryRefrigeratedTransport")}
-                  </Link>
+                  </NavLink>
                 </p>
                 <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
-                  <Link to="/storageService">
+                  <NavLink to="/storageService" className={NavlinkStyle}>
                     {t("navbar.dropDownMenu.storageService")}
-                  </Link>
+                  </NavLink>
                 </p>
                 <p className="text-center cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full">
-                  <Link to="/customsClearance">
+                  <NavLink to="/customsClearance" className={NavlinkStyle}>
                     {t("navbar.dropDownMenu.customsClearance")}
-                  </Link>
+                  </NavLink>
                 </p>
               </div>
               {
@@ -86,9 +86,9 @@ const Navbar = () => {
               }
             </div>
             <span className="cursor-pointer text-neutralLightGray hover:text-primaryMain highLineHeight">
-              <Link to="/contact">
+              <NavLink to="/contact" className={NavlinkStyle}>
                 {t("navbar.contact")}
-              </Link>
+              </NavLink>
             </span>
           </nav>
         </div>
@@ -132,14 +132,14 @@ const Navbar = () => {
       {openMenu && (
         <div className={`lg:hidden px-6 py-4 space-y-4 ${isArabic ? "text-left" : "text-right"}`}>
           <span className="w-fit block cursor-pointer hover:text-primaryMain text-neutralLightGray duration-500 highLineHeight">
-            <Link to="/" onClick={handleLinkCloseClick}>
+            <NavLink to="/" className={NavlinkStyle} onClick={handleLinkCloseClick}>
               {t("navbar.home")}
-            </Link>
+            </NavLink>
           </span>
           <span className="w-fit block cursor-pointer hover:text-primaryMain text-neutralLightGray duration-500 highLineHeight">
-            <Link to="/about" onClick={handleLinkCloseClick}>
+            <NavLink to="/about" className={NavlinkStyle} onClick={handleLinkCloseClick}>
               {t("navbar.about")}
-            </Link>
+            </NavLink>
           </span>
 
           <span className=" block cursor-pointer hover:text-primaryMain duration-500 highLineHeight" onClick={() => setMobServices(!mobServices)}>
@@ -163,33 +163,33 @@ const Navbar = () => {
               mobServices && (
                 <div onClick={handleLinkCloseClick} className={`w-full block space-y-4 py-4 text-start`}>
                   <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
-                    <Link to="/parcelDelivery">
+                    <NavLink to="/parcelDelivery" className={NavlinkStyle}>
                       {t("navbar.dropDownMenu.parcelDelivery")}
-                    </Link>
+                    </NavLink>
                   </p>
                   <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
-                    <Link to="/dryRefrigeratedTransport">
+                    <NavLink to="/dryRefrigeratedTransport" className={NavlinkStyle}>
                       {t("navbar.dropDownMenu.dryRefrigeratedTransport")}
-                    </Link>
+                    </NavLink>
                   </p>
                   <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
-                    <Link to="/storageService">
+                    <NavLink to="/storageService" className={NavlinkStyle}>
                       {t("navbar.dropDownMenu.storageService")}
-                    </Link>
+                    </NavLink>
                   </p>
                   <p className="cursor-pointer text-neutralLightGray highLineHeight hover:bg-primarySoft hover:text-primaryMain duration-400 w-full p-2">
-                    <Link to="/customsClearance">
+                    <NavLink to="/customsClearance" className={NavlinkStyle}>
                       {t("navbar.dropDownMenu.customsClearance")}
-                    </Link>
+                    </NavLink>
                   </p>
                 </div>
               )
             }
           </span>
           <span className="w-fit block cursor-pointer hover:text-primaryMain text-neutralLightGray duration-500 highLineHeight">
-            <Link to="/contact" onClick={handleLinkCloseClick}>
+            <NavLink to="/contact" className={NavlinkStyle} onClick={handleLinkCloseClick}>
               {t("navbar.contact")}
-            </Link>
+            </NavLink>
           </span>
 
           <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4 smallLineHeight">

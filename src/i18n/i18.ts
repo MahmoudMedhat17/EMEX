@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServiceEn, StorageServiceAr, DryRefrigeratedTransportEn, DryRefrigeratedTransportAr } from "@/i18n/index";
+import { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServiceEn, StorageServiceAr, DryRefrigeratedTransportEn, DryRefrigeratedTransportAr, ContactEn, ContactAr } from "@/i18n/index";
 
 
 // the translations
@@ -13,7 +13,8 @@ const resources = {
     ParcelDelivery: ParcelDeliveryEn,
     CustomsClearance: CustomsClearanceEn,
     StorageService: StorageServiceEn,
-    DryRefrigeratedTransport:DryRefrigeratedTransportEn
+    DryRefrigeratedTransport: DryRefrigeratedTransportEn,
+    Contact:ContactEn
   },
   ar: {
     Home: HomeAr,
@@ -21,7 +22,8 @@ const resources = {
     ParcelDelivery: ParcelDeliveryAr,
     CustomsClearance: CustomsClearanceAr,
     StorageService: StorageServiceAr,
-    DryRefrigeratedTransport:DryRefrigeratedTransportAr
+    DryRefrigeratedTransport: DryRefrigeratedTransportAr,
+    Contact:ContactAr    
   }
 };
 
@@ -31,7 +33,7 @@ i18n
     resources,
     lng: "ar",
     fallbackLng:"en",
-    ns:["Home","About","ParcelDelivery","CustomsClearance","StorageService" , "DryRefrigeratedTransport"],
+    ns:["Home","About","ParcelDelivery","CustomsClearance","StorageService" , "DryRefrigeratedTransport", "Contact"],
 
     interpolation: {
       escapeValue: false // react already safes from xss

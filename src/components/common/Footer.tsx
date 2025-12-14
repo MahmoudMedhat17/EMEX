@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
+import ScrollToTop from "@/utils/ScrollToTop";
 
 
 
@@ -60,7 +61,7 @@ const Footer = () => {
             </p>
             <ul className="space-y-4">
               <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
-                <Link to="/">
+                <Link to="/" onClick={ScrollToTop}>
                   {t("footer.home")}
                 </Link>
               </li>
@@ -128,13 +129,13 @@ const Footer = () => {
                   isArabic ?
                     (
                       <span className="hover:text-primaryMain duration-500 cursor-default">
-                        596003377 (966+)
+                        598889936 (966+)
                       </span>
                     )
                     :
                     (
                       <span className="hover:text-primaryMain duration-500 cursor-default">
-                        (+966) 596003377
+                        (+966) 598889936
                       </span>
                     )
                 }

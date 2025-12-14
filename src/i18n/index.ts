@@ -10,7 +10,10 @@ import StorageServiceEn from "@/i18n/en/StorageServiceEn.json";
 import StorageServiceAr from "@/i18n/ar/StorageServiceAr.json";
 import DryRefrigeratedTransportEn from "@/i18n/en/DryRefrigeratedTransportEn.json";
 import DryRefrigeratedTransportAr from "@/i18n/ar/DryRefrigeratedTransportAr.json";
+import ContactEn from "@/i18n/en/ContactEn.json";
+import ContactAr from "@/i18n/ar/ContactAr.json";
 
 
 
-export { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServiceEn, StorageServiceAr, DryRefrigeratedTransportEn, DryRefrigeratedTransportAr };
+
+export { HomeEn, HomeAr, AboutEn, AboutAr, ParcelDeliveryEn, ParcelDeliveryAr, CustomsClearanceEn, CustomsClearanceAr, StorageServiceEn, StorageServiceAr, DryRefrigeratedTransportEn, DryRefrigeratedTransportAr, ContactEn, ContactAr };
