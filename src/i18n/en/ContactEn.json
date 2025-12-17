@@ -3,6 +3,34 @@
         "title":"Contact us",
         "desc":"Contact us or search for answers in our Frequently Asked Questions section"
     },
+    "contactUs":{
+        "title":"Book a Service Now",
+        "desc":"Fill in your information or contact us directly through the available methods",
+        "formDetails":{
+            "name":"Your Name",
+            "email":"Your Email",
+            "phone":"Mobile number",
+            "message":"Write your message"
+        },
+        "formService":{
+            "header":"Service type (optional)",
+            "services":{
+                "serviceOne":"Dry and refrigerated transportation",
+                "serviceTwo":"Storage service",
+                "serviceThree":"Parcel delivery",
+                "serviceFour":"Customs clearance"
+            },
+            "submitButton":"Submit"
+        },
+        "reachUs":{
+            "header":"Other ways to Communication",
+            "socialMedia":{
+                "email":" info@Femexs.com",
+                "phone":"(+966) 598889936",
+                "location":"Saudi Arabia - Jeddah"
+            }
+        }
+    },
     "commonQuestions":{
         "header":"FAQ's",
         "title":"Clear and quick answers",

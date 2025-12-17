@@ -48,7 +48,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center gap-8 md:px-[50px] lg:px-[109px] xl:px-[209px]">
           {
             reversedServicesData.map((data, index) => (
-              <div key={index} className="flex flex-col border border-neutralSoftGray p-4 rounded-2xl h-full">
+              <div key={index} className="flex flex-col justify-between border border-neutralSoftGray p-4 rounded-2xl h-full">
                 <img src={t(data.img)} className="w-full" />
                 <div className="space-y-2 mt-6 mb-4">
                   <h4 className={`text-xl font-semibold midLineHeight ${isArabic === "ar" ? "text-right" : "text-left"}`}>{t(data.title)}</h4>

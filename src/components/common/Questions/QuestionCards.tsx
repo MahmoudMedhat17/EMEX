@@ -20,7 +20,7 @@ const QuestionCards = ({ question, answer }: IQuestionCards) => {
                     {answer}
                 </p>
             </details>
-        </div>
+        </div >
     )
 }
 

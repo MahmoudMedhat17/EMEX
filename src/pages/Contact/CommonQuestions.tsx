@@ -1,9 +1,12 @@
+// import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import QuestionCards from '@/components/common/Questions/QuestionCards';
+import ObjectConversion from '@/utils/ObjectConversion';
 
 
 const CommonQuestions = () => {
 
+    // const [accordianOpen, setAccordianOpen] = useState<number | null>(null);
 
     const { t, i18n } = useTranslation("Contact");
 
@@ -12,6 +15,9 @@ const CommonQuestions = () => {
     const direction = isArabic ? "rtl" : "ltr";
 
     // Need to make the Accordian opens one question at time only.
+
+    const questionsArray = ObjectConversion(t, "commonQuestions.questions");
+
 
 
     return (
@@ -28,11 +34,11 @@ const CommonQuestions = () => {
                 </p>
             </div>
             <div className='pt-12 space-y-4 w-full md:w-[700px] lg:w-[821px] mx-auto'>
-                <QuestionCards question={t("commonQuestions.questions.questionOne.question")} answer={t("commonQuestions.questions.questionOne.answer")} />
-                <QuestionCards question={t("commonQuestions.questions.questionTwo.question")} answer={t("commonQuestions.questions.questionTwo.answer")} />
-                <QuestionCards question={t("commonQuestions.questions.questionThree.question")} answer={t("commonQuestions.questions.questionThree.answer")} />
-                <QuestionCards question={t("commonQuestions.questions.questionFour.question")} answer={t("commonQuestions.questions.questionFour.answer")} />
-                <QuestionCards question={t("commonQuestions.questions.questionFive.question")} answer={t("commonQuestions.questions.questionFive.answer")} />
+                {
+                    questionsArray.map((ques, index) => (
+                        <QuestionCards key={index} question={ques.question} answer={ques.answer} />
+                    ))
+                }
             </div>
         </section>
     )

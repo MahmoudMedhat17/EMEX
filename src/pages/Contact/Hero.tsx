@@ -16,8 +16,8 @@ const AboutHero = () => {
         <section dir={direction} className="relative h-[400px] w-full overflow-hidden">
 
             <img
-                src="/assets/heroImage.jpg"
-                className="absolute inset-0 w-full h-[400px] object-cover"
+                src="/assets/contactHero.png"
+                className="absolute inset-0 w-full h-[400px] object-center"
             />
 
             <div className="absolute inset-0 bg-black/70 h-[410px]"></div>

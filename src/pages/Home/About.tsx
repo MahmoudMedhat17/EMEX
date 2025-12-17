@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { Link } from 'react-router';
 
 
@@ -16,23 +16,12 @@ const About = () => {
   return (
     <section className="py-8 md:py-16 flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[121px]" dir={direction}>
       <div className="flex flex-col space-y-4">
-        <p className="text-primaryDark text-lg font-semibold smallLineHeight rounded-lg">
+        <p className="bg-primarySoft text-primaryDark text-lg font-semibold py-2 px-4 inline-block smallLineHeight rounded-lg w-fit">
           {t("about.subHeading")}
         </p>
-        {
-          isArabic ?
-            (
-              <h2 className="font-semibold text-[40px] lg:max-w-[400px] midLineHeight">
-                نقدم حلول <span className="text-primaryMain">لوجستية حديثة</span> تساعدك تنمّي عملك بثبات
-              </h2>
-            )
-            :
-            (
-              <h2 className="font-semibold text-[40px] lg:max-w-[400px] midLineHeight">
-                We provide logistics solutions to help your <span className='text-primaryMain'>business grow</span>
-              </h2>
-            )
-        }
+        <h2 className="font-semibold text-[40px] lg:max-w-[400px] midLineHeight">
+          <Trans i18nKey={t("about.title")} components={{ span: <span className='text-primaryMain' /> }} />
+        </h2>
         <p className="lg:max-w-[400px] text-neutralDarkGray highLineHeight">
           {t("about.desc")}
         </p>
