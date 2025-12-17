@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const ContactUs = () => {
 
 
-    const { t, i18n } = useTranslation("Contact");
+    const { i18n } = useTranslation("Contact");
 
     const isArabic = i18n.language === "ar";
 
