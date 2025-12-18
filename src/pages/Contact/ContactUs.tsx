@@ -8,7 +8,7 @@ import { TbBrandLinkedinFilled } from "react-icons/tb";
 const ContactUs = () => {
 
 
-    const { i18n } = useTranslation("Contact");
+    const { t, i18n } = useTranslation("Contact");
 
     const isArabic = i18n.language === "ar";
 
@@ -18,40 +18,41 @@ const ContactUs = () => {
         <section dir={direction} className='py-8 md:py-16'>
             <div className='flex flex-col md:flex-row justify-between gap-12 md:gap-0h w-full'>
                 <div className='w-full'>
-                    <h2 className='text-[32px] md:text-[40px] text-neutralBlack font-semibold midLineHeight'>اطلب خدمتك الأن </h2>
-                    <p className='text-[18px] text-neutralDarkGray highLineHeight mb-10 md:mb-0'>املئ لنا بياناتك أو تواصل مباشرة من خلال الطرق المتاحة.</p>
+                    <h2 className='text-[32px] md:text-[40px] text-neutralBlack font-semibold midLineHeight'>{t("contactUs.title")}</h2>
+                    <p className='text-[18px] text-neutralDarkGray highLineHeight mb-10'>{t("contactUs.desc")}</p>
                     <form action="" className='space-y-6'>
                         <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor="الاسم">
-                                الاسم
+                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.name.label")}>
+                                {t("contactUs.formDetails.name.label")}
                             </label>
-                            <input type="text" placeholder='الاسم كامل' className='py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight placeholder:px-4 placeholder:py-3 hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
                         </div>
                         <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor="البريد الالكتروني">
-                                البريد الالكتروني
+                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.email.label")}>
+                                {t("contactUs.formDetails.email.label")}
                             </label>
-                            <input type="text" placeholder='example@gmail.com' className='py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight placeholder:px-4 placeholder:py-3 hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formDetails.email.placeHolder")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
                         </div>
                         <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor="رقم المحمول">
-                                رقم المحمول
+                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.phone.label")}>
+                                {t("contactUs.formDetails.phone.label")}
                             </label>
-                            <input type="text" placeholder='(+966) 123456784' className='py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight placeholder:px-4 placeholder:py-3 hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formDetails.phone.placeHolder")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
                         </div>
                         <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor="اكتب رسالتك">
-                                اكتب رسالتك
+                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.message.label")}>
+                                {t("contactUs.formDetails.message.label")}
                             </label>
-                            <textarea rows={8} cols={20} placeholder='احك لنا شوي عن المشروع...' className='resize-none border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight placeholder:px-4 placeholder:py-3 hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <textarea rows={8} cols={20} placeholder={t("contactUs.formDetails.message.placeHolder")} className='resize-none border border-neutralSoftGray placeholder:text-[16px] px-4 py-3 placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
                         </div>
                         <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor="نوع الخدمة ( إختياري )">
-                                نوع الخدمة ( إختياري )
+                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formService.header")}>
+                                {t("contactUs.formService.header")}
                             </label>
+                            <input type="text" placeholder={t("contactUs.formService.placeHolder")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
                         </div>
                         <button className='text-[16px] font-semibold smallLineHeight w-full bg-primaryMain text-white hover:bg-primaryDark duration-300 rounded-lg p-5 cursor-pointer'>
-                            إرسال الطلب
+                            {t("contactUs.submitButton")}
                         </button>
                     </form>
                 </div>
@@ -59,20 +60,20 @@ const ContactUs = () => {
                     <img src="/assets/callUs.png" className='w-full rounded-tl-lg rounded-tr-lg' />
                     <div className='p-6'>
                         <h3 className='text-[32px] font-semibold midLineHeight mb-6'>
-                            وسائل تواصل أخرى
+                            {t("contactUs.reachUs.header")}
                         </h3>
                         <div className='space-y-4 mb-6'>
                             <div className='flex items-center justify-between gap-2 w-fit'>
                                 <img src="/assets/contactusEmail.png" />
-                                <p className='text-[18px] highLineHeight text-neutralBlack'>info@Femexs.com</p>
+                                <p className='text-[18px] highLineHeight text-neutralBlack'>{t("contactUs.reachUs.socialMedia.email")}</p>
                             </div>
                             <div className='flex items-center justify-between gap-2 w-fit'>
                                 <img src="/assets/contactusPhone.png" />
-                                <p className='text-[18px] highLineHeight text-neutralBlack'> (+966) 596003377</p>
+                                <p className='text-[18px] highLineHeight text-neutralBlack'>{t("contactUs.reachUs.socialMedia.phone")}</p>
                             </div>
                             <div className='flex items-center justify-between gap-2 w-fit'>
                                 <img src="/assets/contactusLocation.png" />
-                                <p className='text-[18px] highLineHeight text-neutralBlack'>المملكة العربية السعودية - جدة </p>
+                                <p className='text-[18px] highLineHeight text-neutralBlack'>{t("contactUs.reachUs.socialMedia.location")}</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-3 py-6 border-t border-t-primaryDark'>
@@ -82,7 +83,6 @@ const ContactUs = () => {
                             <TbBrandLinkedinFilled className='w-6 h-6 hover:text-primaryMain duration-500' />
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

@@ -7,21 +7,28 @@
         "title":"Book a Service Now",
         "desc":"Fill in your information or contact us directly through the available methods",
         "formDetails":{
-            "name":"Your Name",
-            "email":"Your Email",
-            "phone":"Mobile number",
-            "message":"Write your message"
+            "name":{
+                "label":"Your Name",
+                "placeHolder":"Full Name"
+            },
+            "email":{
+                "label":"Your Email",
+                "placeHolder":"example@gmail.com"
+            },
+            "phone":{
+                "label":"Phone number",
+                "placeHolder":"(+966) 123456784"
+            },
+            "message":{
+                "label":"Write your message",
+                "placeHolder":"Tell us a little about the project..."
+            }
         },
         "formService":{
             "header":"Service type (optional)",
-            "services":{
-                "serviceOne":"Dry and refrigerated transportation",
-                "serviceTwo":"Storage service",
-                "serviceThree":"Parcel delivery",
-                "serviceFour":"Customs clearance"
-            },
-            "submitButton":"Submit"
+            "placeHolder":"Choose Your Service type"
         },
+        "submitButton":"Submit",
         "reachUs":{
             "header":"Other ways to Communication",
             "socialMedia":{

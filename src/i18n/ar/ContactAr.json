@@ -7,21 +7,28 @@
         "title":"اطلب خدمتك الأن",
         "desc":"املئ لنا بياناتك أو تواصل مباشرة من خلال الطرق المتاحة.",
         "formDetails":{
-            "name":"الاسم",
-            "email":"البريد الالكتروني",
-            "phone":"رقم المحمول",
-            "message":"اكتب رسالتك"
+            "name":{
+                "label":"الاسم",
+                "placeHolder":"الاسم الكامل"
+            },
+            "email":{
+                "label":"البريد الالكتروني",
+                "placeHolder":"example@gmil.com"
+            },
+            "phone":{
+                "labe":"رقم الهاتف",
+                "placeHolder":"123456784 (+966)"
+            },
+            "message":{
+                "label":"اكتب رسالتك",
+                "placeHolder":"احك لنا شوي عن المشروع..."
+            }
         },
         "formService":{
             "header":"نوع الخدمة ( إختياري )",
-            "services":{
-                "serviceOne":"النقل الجاف والمبرد",
-                "serviceTwo":"خدمه التحزين",
-                "serviceThree":"توصيل الطرود",
-                "serviceFour":"تخليص جمركي"
-            },
-            "submitButton":"إرسال الطلب"
+            "placeHolder":"اكتب نوع الخدمة"
         },
+        "submitButton":"إرسال الطلب",
         "reachUs":{
             "header":"وسائل تواصل أخرى",
             "socialMedia":{
