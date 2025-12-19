@@ -147,7 +147,8 @@ const Footer = () => {
         <div className="border-t-2 border-primaryMain">
           <p className="text-center text-neutralLightGray mt-9 highLineHeight">
 
-            جميع الحقوق محفوظة.
+            <span>جميع الحقوق محفوظة</span>
+            {" "}
             <span>FEMEX Logistics Company © 2025</span>
 
           </p>

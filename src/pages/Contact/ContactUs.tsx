@@ -95,6 +95,7 @@ const ContactUs = () => {
                             draggable
                             pauseOnHover
                             theme="light"
+                            style={{ maxWidth: "max-content" }}
                         />
                     </form>
                 </div>
