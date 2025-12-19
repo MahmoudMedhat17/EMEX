@@ -53,33 +53,33 @@ const ContactUs = () => {
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.name.label")}>
                                 {t("contactUs.formDetails.name.label")}
                             </label>
-                            <input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} {...register("name")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} {...register("name")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.email.label")}>
                                 {t("contactUs.formDetails.email.label")}
                             </label>
-                            <input type="text" placeholder={t("contactUs.formDetails.email.placeHolder")} {...register("email")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formDetails.email.placeHolder")} {...register("email")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                             {errors && <p className='text-red-500'>{errors.email?.message}</p>}
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.phone.label")}>
                                 {t("contactUs.formDetails.phone.label")}
                             </label>
-                            <input type="text" placeholder={t("contactUs.formDetails.phone.placeHolder")} {...register("phone")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formDetails.phone.placeHolder")} {...register("phone")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                             {errors && <p className='text-red-500'>{errors.phone?.message}</p>}
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.message.label")}>
                                 {t("contactUs.formDetails.message.label")}
                             </label>
-                            <textarea rows={8} cols={20} placeholder={t("contactUs.formDetails.message.placeHolder")} {...register("message")} className='resize-none border border-neutralSoftGray placeholder:text-[16px] px-4 py-3 placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <textarea rows={8} cols={20} placeholder={t("contactUs.formDetails.message.placeHolder")} {...register("message")} className='resize-none border border-neutralSoftGray placeholder:text-[16px] px-4 py-3 placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formService.header")}>
                                 {t("contactUs.formService.header")}
                             </label>
-                            <input type="text" placeholder={t("contactUs.formService.placeHolder")} {...register("service")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shad-dow-lg focus:outline-2 focus:outline-primaryMain rounded-lg' />
+                            <input type="text" placeholder={t("contactUs.formService.placeHolder")} {...register("service")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                         </div>
                         <button onClick={notify} className='text-[16px] font-semibold smallLineHeight w-full bg-primaryMain text-white hover:bg-primaryDark duration-300 rounded-lg p-5 cursor-pointer'>
                             {t("contactUs.submitButton")}

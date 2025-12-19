@@ -13,7 +13,7 @@
             },
             "email":{
                 "label":"البريد الالكتروني",
-                "placeHolder":"example@gmil.com"
+                "placeHolder":"example@gmail.com"
             },
             "phone":{
                 "label":"رقم الهاتف",
