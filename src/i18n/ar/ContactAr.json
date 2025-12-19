@@ -16,7 +16,7 @@
                 "placeHolder":"example@gmil.com"
             },
             "phone":{
-                "labe":"رقم الهاتف",
+                "label":"رقم الهاتف",
                 "placeHolder":"123456784 (+966)"
             },
             "message":{
@@ -29,6 +29,7 @@
             "placeHolder":"اكتب نوع الخدمة"
         },
         "submitButton":"إرسال الطلب",
+        "notify":"تم إرسال طلبك بنجاح سيتم التواصل معك قريباََ",
         "reachUs":{
             "header":"وسائل تواصل أخرى",
             "socialMedia":{

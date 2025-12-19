@@ -29,6 +29,7 @@
             "placeHolder":"Choose Your Service type"
         },
         "submitButton":"Submit",
+        "notify":"Message sent successfully, we will contact you soon!",
         "reachUs":{
             "header":"Other ways to Communication",
             "socialMedia":{
