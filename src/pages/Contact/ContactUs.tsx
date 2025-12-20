@@ -57,7 +57,7 @@ const ContactUs = () => {
                             <input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} {...register("userName")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                             {errors && <p className='text-red-500'>{errors.userName?.message}</p>}
                         </div>
-                        <div className='flex flex-col space-y-2'>
+                        <div className='flex flex-col space-y-2'>Wo
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.email.label")}>
                                 {t("contactUs.formDetails.email.label")}
                             </label>
