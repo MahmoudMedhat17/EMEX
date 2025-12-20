@@ -68,9 +68,11 @@ const Hero = () => {
                 (
                   <>
                     <button className="bg-primaryMain text-white hover:bg-primaryDark duration-500 p-4 rounded-lg font-semibold cursor-pointer smallLineHeight">
-                      {t("hero.buttons.buttonLeft")}
+                      <Link to="/contact">
+                        {t("hero.buttons.buttonLeft")}
+                      </Link>
                     </button>
-                    <button className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 p-4 rounded-lg font-semibold cursor-pointer smallLineHeight">
+                    <button onClick={() => scrollToServices()} className="bg-white border-primaryMain text-primaryDark hover:bg-primaryDark hover:text-white duration-500 p-4 rounded-lg font-semibold cursor-pointer smallLineHeight">
                       {t("hero.buttons.buttonRight")}
                     </button>
                   </>

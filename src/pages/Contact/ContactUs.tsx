@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { TbBrandLinkedinFilled } from "react-icons/tb";
+import InputField from '@/utils/InputField';
 import emailjs from '@emailjs/browser';
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { type ContactFormData, contactSchema } from '@/Schemas/ContactSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ToastContainer, toast } from 'react-toastify';
 import SuccessMessage from '@/utils/SuccessMsg';
-
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { TbBrandLinkedinFilled } from "react-icons/tb";
 
 
 const PUBLIC_ID = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -67,40 +67,11 @@ const ContactUs = () => {
                     <h2 className='text-[32px] md:text-[40px] text-neutralBlack font-semibold midLineHeight'>{t("contactUs.title")}</h2>
                     <p className='text-[18px] text-neutralDarkGray highLineHeight mb-10'>{t("contactUs.desc")}</p>
                     <form onSubmit={handleSubmit(onSubmitForm)} className='space-y-6'>
-                        <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.name.label")}>
-                                {t("contactUs.formDetails.name.label")}
-                            </label>
-                            <input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} {...register("userName")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500 mt-1'>{errors.userName?.message}</p>}
-                        </div>
-                        <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.email.label")}>
-                                {t("contactUs.formDetails.email.label")}
-                            </label>
-                            <input type="text" placeholder={t("contactUs.formDetails.email.placeHolder")} {...register("email")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500 mt-1'>{errors.email?.message}</p>}
-                        </div>
-                        <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.phone.label")}>
-                                {t("contactUs.formDetails.phone.label")}
-                            </label>
-                            <input type="text" placeholder={t("contactUs.formDetails.phone.placeHolder")} {...register("phone")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500 mt-1'>{errors.phone?.message}</p>}
-                        </div>
-                        <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.message.label")}>
-                                {t("contactUs.formDetails.message.label")}
-                            </label>
-                            <textarea rows={8} cols={20} placeholder={t("contactUs.formDetails.message.placeHolder")} {...register("message")} className='resize-none border border-neutralSoftGray placeholder:text-[16px] px-4 py-3 placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500 mt-1'>{errors.message?.message}</p>}
-                        </div>
-                        <div className='flex flex-col space-y-2'>
-                            <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formService.header")}>
-                                {t("contactUs.formService.header")}
-                            </label>
-                            <input type="text" placeholder={t("contactUs.formService.placeHolder")} {...register("service")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                        </div>
+                        <InputField label={t("contactUs.formDetails.name.label")} children={<input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} {...register("userName")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />} error={errors?.userName?.message} />
+                        <InputField label={t("contactUs.formDetails.email.label")} children={<input type="text" placeholder={t("contactUs.formDetails.email.placeHolder")} {...register("email")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />} error={errors?.message?.message} />
+                        <InputField label={t("contactUs.formDetails.phone.label")} children={<input type="text" placeholder={t("contactUs.formDetails.phone.placeHolder")} {...register("phone")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />} error={errors?.phone?.message} />
+                        <InputField label={t("contactUs.formDetails.message.label")} children={<textarea rows={8} cols={20} placeholder={t("contactUs.formDetails.message.placeHolder")} {...register("message")} className='resize-none border border-neutralSoftGray placeholder:text-[16px] px-4 py-3 placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />} error={errors?.message?.message} />
+                        <InputField label={t("contactUs.formService.header")} children={<input type="text" placeholder={t("contactUs.formService.placeHolder")} {...register("service")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />} />
                         <button type='submit' disabled={isSubmitting} onClick={handleSubmitForm} className='text-[16px] font-semibold smallLineHeight w-full bg-primaryMain text-white hover:bg-primaryDark duration-300 rounded-lg p-5 cursor-pointer'>
                             {t("contactUs.submitButton")}
                         </button>
@@ -119,6 +90,8 @@ const ContactUs = () => {
                         />
                     </form>
                 </div>
+
+
                 <div className='bg-primarySoft w-full rounded-lg'>
                     <img src="/assets/callUs.png" className='w-full rounded-tl-lg rounded-tr-lg' />
                     <div className='p-6'>
