@@ -16,11 +16,13 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 
+
 const ContactUs = () => {
 
     const { register, handleSubmit, formState: { errors, isValid, isSubmitting }, reset } = useForm<ContactFormData>({
         resolver: zodResolver(contactSchema),
-        mode: "onChange"
+        mode: "onSubmit",
+        reValidateMode: "onChange"
     });
 
 
@@ -28,8 +30,14 @@ const ContactUs = () => {
         await emailjs.send(
             SERVICE_ID,
             TEMPLATE_ID,
-            data,
-            PUBLIC_ID
+            {
+                userName: data.userName,
+                email: data.email,
+                phone: data.phone,
+                message: data.message,
+                service: data.service
+            },
+            PUBLIC_ID,
         )
         reset();
     };
@@ -41,6 +49,15 @@ const ContactUs = () => {
     const direction = isArabic ? "rtl" : "ltr";
 
     const notify = () => toast(<SuccessMessage message={t("contactUs.notify")} />, { icon: false, hideProgressBar: true });
+
+    const handleSubmitForm = () => {
+        if (!isValid) {
+            return;
+        }
+        else {
+            notify();
+        }
+    };
 
 
     return (
@@ -55,28 +72,28 @@ const ContactUs = () => {
                                 {t("contactUs.formDetails.name.label")}
                             </label>
                             <input type="text" placeholder={t("contactUs.formDetails.name.placeHolder")} {...register("userName")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500'>{errors.userName?.message}</p>}
+                            {errors && <p className='text-red-500 mt-1'>{errors.userName?.message}</p>}
                         </div>
-                        <div className='flex flex-col space-y-2'>Wo
+                        <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.email.label")}>
                                 {t("contactUs.formDetails.email.label")}
                             </label>
                             <input type="text" placeholder={t("contactUs.formDetails.email.placeHolder")} {...register("email")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500'>{errors.email?.message}</p>}
+                            {errors && <p className='text-red-500 mt-1'>{errors.email?.message}</p>}
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.phone.label")}>
                                 {t("contactUs.formDetails.phone.label")}
                             </label>
                             <input type="text" placeholder={t("contactUs.formDetails.phone.placeHolder")} {...register("phone")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500'>{errors.phone?.message}</p>}
+                            {errors && <p className='text-red-500 mt-1'>{errors.phone?.message}</p>}
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formDetails.message.label")}>
                                 {t("contactUs.formDetails.message.label")}
                             </label>
                             <textarea rows={8} cols={20} placeholder={t("contactUs.formDetails.message.placeHolder")} {...register("message")} className='resize-none border border-neutralSoftGray placeholder:text-[16px] px-4 py-3 placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
-                            {errors && <p className='text-red-500'>{errors.message?.message}</p>}
+                            {errors && <p className='text-red-500 mt-1'>{errors.message?.message}</p>}
                         </div>
                         <div className='flex flex-col space-y-2'>
                             <label className='text-[16px] text-neutralDarkGray font-medium smallLineHeight' htmlFor={t("contactUs.formService.header")}>
@@ -84,7 +101,7 @@ const ContactUs = () => {
                             </label>
                             <input type="text" placeholder={t("contactUs.formService.placeHolder")} {...register("service")} className='px-4 py-3 border border-neutralSoftGray placeholder:text-[16px] placeholder:text-neutralLightGray placeholder:highLineHeight hover:border-neutralLightGray duration-300 shadow-sm focus:border-primaryMain focus:outline-none rounded-lg' />
                         </div>
-                        <button type='submit' disabled={!isValid || isSubmitting} onClick={notify} className='text-[16px] font-semibold smallLineHeight w-full bg-primaryMain text-white hover:bg-primaryDark duration-300 rounded-lg p-5 cursor-pointer'>
+                        <button type='submit' disabled={isSubmitting} onClick={handleSubmitForm} className='text-[16px] font-semibold smallLineHeight w-full bg-primaryMain text-white hover:bg-primaryDark duration-300 rounded-lg p-5 cursor-pointer'>
                             {t("contactUs.submitButton")}
                         </button>
                         <ToastContainer
