@@ -192,14 +192,14 @@ const Navbar = () => {
             </NavLink>
           </span>
 
-          <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4 smallLineHeight">
-            <Link to="/contact">
+          <Link to="/contact">
+            <button className="bg-primaryMain text-white px-4 py-2 rounded-lg w-full mt-4 smallLineHeight cursor-pointer">
               {t("navbar.order")}
-            </Link>
-          </button>
+            </button>
+          </Link>
 
           <div
-            className="flex items-center gap-2 cursor-pointer mt-2"
+            className="w-fit flex items-center gap-2 cursor-pointer mt-2"
             onClick={handleLanguage}
           >
             <img src="/assets/translateIcon.png" alt="translate" className="w-5" />

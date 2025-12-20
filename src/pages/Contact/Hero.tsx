@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 
 
-const AboutHero = () => {
+const Hero = () => {
 
 
     const { t, i18n } = useTranslation("Contact");
@@ -17,7 +17,7 @@ const AboutHero = () => {
 
             <img
                 src="/assets/contactHero.png"
-                className="absolute inset-0 w-full h-[400px] object-center"
+                className="absolute inset-0 w-full h-[400px] object-cover"
             />
 
             <div className="absolute inset-0 bg-black/70 h-[410px]"></div>
@@ -36,4 +36,4 @@ const AboutHero = () => {
     )
 }
 
-export default AboutHero;
+export default Hero;

@@ -1,13 +1,13 @@
 import { z } from "zod";
 
 const contactSchema = z.object({
-    name: z.string(),
+    userName: z.string().min(1,"Username is requried"),
     email: z.email({ message: "Invalid email address" }),
-    phone: z.string().optional().refine(
-        (val) => !val || /^\+?[1-9]\d{1,14}$/.test(val.replace(/\s/g, "")),
+    phone: z.string().min(1,"Phone Number is required").optional().refine(
+        (val) => !val || /^\+?[0-9]\d{1,14}$/.test(val.replace(/\s/g, "")),
         { message: "Invalid phone number" }
     ),
-    message: z.string(),
+    message: z.string().min(1,"Message is required"),
     service: z.string().optional()
 });
 
