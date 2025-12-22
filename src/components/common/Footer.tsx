@@ -60,17 +60,17 @@ const Footer = () => {
               {t("footer.linkOne")}
             </p>
             <ul className="space-y-4">
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight w-fit">
                 <Link to="/" onClick={ScrollToTop}>
                   {t("footer.home")}
                 </Link>
               </li>
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight w-fit">
                 <Link to="/about">
                   {t("footer.whoWeAre")}
                 </Link>
               </li>
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default highLineHeight w-fit">
                 <Link to="/contact">
                   {t("footer.contact")}
                 </Link>
@@ -83,22 +83,22 @@ const Footer = () => {
               {t("footer.linkTwo")}
             </p>
             <ul className="space-y-4">
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default w-fit">
                 <Link to="/parcelDelivery">
                   {t("footer.parcelDelivery")}
                 </Link>
               </li>
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default w-fit">
                 <Link to="/dryRefrigeratedTransport">
                   {t("footer.dryAndRefrigeratedTransport")}
                 </Link>
               </li>
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default w-fit">
                 <Link to="/storageService">
                   {t("footer.storageServices")}
                 </Link>
               </li>
-              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default">
+              <li className="text-neutralLightGray hover:text-primaryMain duration-500 cursor-default w-fit">
                 <Link to="/customsClearance">
                   {t("footer.customsClearance")}
                 </Link>
